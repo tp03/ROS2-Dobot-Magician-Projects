@@ -1,0 +1,25 @@
+running egg_info
+writing ../build/prd1/prd1.egg-info/PKG-INFO
+writing dependency_links to ../build/prd1/prd1.egg-info/dependency_links.txt
+writing entry points to ../build/prd1/prd1.egg-info/entry_points.txt
+writing requirements to ../build/prd1/prd1.egg-info/requires.txt
+writing top-level names to ../build/prd1/prd1.egg-info/top_level.txt
+reading manifest file '../build/prd1/prd1.egg-info/SOURCES.txt'
+writing manifest file '../build/prd1/prd1.egg-info/SOURCES.txt'
+running build
+running build_py
+copying prd1/turtle_tango.py -> /home/tp03/anro_ws/src/build/prd1/build/lib/prd1
+running install
+running install_lib
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+copying /home/tp03/anro_ws/src/build/prd1/build/lib/prd1/turtle_tango.py -> /home/tp03/anro_ws/src/install/prd1/lib/python3.10/site-packages/prd1
+byte-compiling /home/tp03/anro_ws/src/install/prd1/lib/python3.10/site-packages/prd1/turtle_tango.py to turtle_tango.cpython-310.pyc
+running install_data
+copying launch/prd1_launch.py -> /home/tp03/anro_ws/src/install/prd1/share/prd1/launch
+running install_egg_info
+removing '/home/tp03/anro_ws/src/install/prd1/lib/python3.10/site-packages/prd1-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/prd1/prd1.egg-info to /home/tp03/anro_ws/src/install/prd1/lib/python3.10/site-packages/prd1-0.0.0-py3.10.egg-info
+running install_scripts
+Installing skz script to /home/tp03/anro_ws/src/install/prd1/lib/prd1
+writing list of installed files to '/home/tp03/anro_ws/src/build/prd1/install.log'
