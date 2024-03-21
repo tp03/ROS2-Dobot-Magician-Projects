@@ -24,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pick_place= lab2.pick_place:main'
+            'pick_place= lab2.pick_place:main',
             'tower_builder= lab2.tower_builder:main'
         ],
     },
