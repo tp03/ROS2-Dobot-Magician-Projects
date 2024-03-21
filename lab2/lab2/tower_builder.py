@@ -6,7 +6,8 @@ class Tower_builder(rclpy.node.Node):
     def __init__(self):
         super().__init__('tower_builder')
         self.in_action = False
-
+        self.declare_parameter(name='tower_size')
+        self.tower_size = self.get_parameter('tower_size').get_parameter_value().integer_value #int tower size
         self.base_x = 0
         self.base_y = 0
         self.base_z = 0
@@ -15,10 +16,13 @@ class Tower_builder(rclpy.node.Node):
         self.cube_y = 0
         self.cube_z = 0
 
+        self.save_z = 80
         self.cube_height = 30
 
-        self.declare_parameter(name='tower_size')
-        self.tower_size = self.get_parameter('tower_size').get_parameter_value().integer_value #int tower size
+        self.move_client = ActionClient(self, PointToPoint, '/PTP_action')
+
+        self.grap_client = self.create_client(GripperControl, '/dobot_gripper_service')
+
         
     def jump(self):
         sleep(1)

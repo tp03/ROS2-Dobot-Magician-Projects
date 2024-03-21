@@ -13,7 +13,6 @@ def generate_launch_description():
         Node(
             package='lab2',
             executable='pick_place',
-            namespace='robot',
             name='my_node',
             # parameters=[{
             # 	'tower_size': LaunchConfiguration('tower_size'),
