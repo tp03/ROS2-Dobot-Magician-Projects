@@ -20,9 +20,6 @@ class Pick_place(rclpy.node.Node):
         self.save_z = 80
         self.cube_height = 30
         
-        self.declare_parameter(name='tower_size')
-        self.tower_size = self.get_parameter('tower_size').get_parameter_value().integer_value
-
         self.move_client = ActionClient(self, PointToPoint, '/PTP_action')
 
         self.grap_client = self.create_client(GripperControl, '/dobot_gripper_service')
