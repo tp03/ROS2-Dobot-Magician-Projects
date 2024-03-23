@@ -88,7 +88,7 @@ class Pick_place(rclpy.node.Node):
             self.change_holding(True)
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([fixed_x + 2*i, fixed_y, 80])
+            self.jump([fixed_x + 2*i, fixed_y, i*20+10])
             while self.in_action == True:
                 rclpy.spin_once(self)
             self.jump([fixed_x + 2*i, fixed_y, 5])
@@ -97,13 +97,13 @@ class Pick_place(rclpy.node.Node):
             self.change_holding(False)
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([fixed_x + 2*i, fixed_y, 80])
+            self.jump([fixed_x + 2*i, fixed_y, i*20+10])
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([tower_x, tower_y, 80])
+            self.jump([tower_x, tower_y, i*20+10])
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([tower_x, tower_y, 10 + i])
+            self.jump([tower_x, tower_y, 10 + i*20])
             while self.in_action == True:
                 rclpy.spin_once(self)    
 
