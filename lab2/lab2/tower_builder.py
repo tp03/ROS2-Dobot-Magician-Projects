@@ -13,7 +13,7 @@ tower_y = 60
 
 class Pick_place(rclpy.node.Node):
     def __init__(self):
-        super().__init__('tower_build')
+        super().__init__('tower_builder')
         
         self.cube_height = 20
         
