@@ -14,12 +14,14 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='tp03',
-    maintainer_email='tp03@todo.todo',
-    description='TODO: Package description',
+    maintainer_email='zalewski.tomek03@gmail.com',
+    description='tower creator for DOBOT',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'pick_place = lab2.pick_place:main'
+            'tower_builder = lab2.tower_builder:main'
         ],
     },
 )
