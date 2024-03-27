@@ -6,10 +6,10 @@ from dobot_msgs.srv import GripperControl
 from time import sleep
 
 
-fixed_x = 200
+fixed_x = 160
 fixed_y = 40
 tower_x = 220
-tower_y = 60
+tower_y = 0
 
 class Pick_place(rclpy.node.Node):
     def __init__(self):
@@ -83,29 +83,34 @@ class Pick_place(rclpy.node.Node):
         self.in_action = False
 
     def tower(self):
-        rclpy.init()
         for i in range(self.tower_size):
             self.change_holding(True)
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([fixed_x + 2*i, fixed_y, i*20+10])
+            self.jump([fixed_x + 40*i, fixed_y, 80])
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([fixed_x + 2*i, fixed_y, 5])
+            self.jump([fixed_x + 40*i, fixed_y, 2])
             while self.in_action == True:
                 rclpy.spin_once(self)
             self.change_holding(False)
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([fixed_x + 2*i, fixed_y, i*20+10])
+            self.jump([fixed_x + 40*i, fixed_y, 80])
             while self.in_action == True:
                 rclpy.spin_once(self)
             self.jump([tower_x, tower_y, i*20+10])
             while self.in_action == True:
                 rclpy.spin_once(self)
-            self.jump([tower_x, tower_y, 10 + i*20])
+            self.jump([tower_x, tower_y, 2 + i*20])
             while self.in_action == True:
                 rclpy.spin_once(self)    
+        self.change_holding(True)
+        while self.in_action == True:
+            rclpy.spin_once(self)
+        self.jump([tower_x, tower_y, 80])
+        while self.in_action == True:
+            rclpy.spin_once(self)
 
 def main():
     rclpy.init()
