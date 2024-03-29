@@ -1,0 +1,38 @@
+running egg_info
+creating ../build/ROS2/ROS2.egg-info
+writing ../build/ROS2/ROS2.egg-info/PKG-INFO
+writing dependency_links to ../build/ROS2/ROS2.egg-info/dependency_links.txt
+writing entry points to ../build/ROS2/ROS2.egg-info/entry_points.txt
+writing requirements to ../build/ROS2/ROS2.egg-info/requires.txt
+writing top-level names to ../build/ROS2/ROS2.egg-info/top_level.txt
+writing manifest file '../build/ROS2/ROS2.egg-info/SOURCES.txt'
+reading manifest file '../build/ROS2/ROS2.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/ROS2/ROS2.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/marcin/anro_ws/src/build/ROS2/build
+creating /home/marcin/anro_ws/src/build/ROS2/build/lib
+creating /home/marcin/anro_ws/src/build/ROS2/build/lib/ROS2
+copying ROS2/__init__.py -> /home/marcin/anro_ws/src/build/ROS2/build/lib/ROS2
+copying ROS2/my_turtle_node.py -> /home/marcin/anro_ws/src/build/ROS2/build/lib/ROS2
+running install
+running install_lib
+creating /home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages/ROS2
+copying /home/marcin/anro_ws/src/build/ROS2/build/lib/ROS2/__init__.py -> /home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages/ROS2
+copying /home/marcin/anro_ws/src/build/ROS2/build/lib/ROS2/my_turtle_node.py -> /home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages/ROS2
+byte-compiling /home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages/ROS2/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages/ROS2/my_turtle_node.py to my_turtle_node.cpython-310.pyc
+running install_data
+creating /home/marcin/anro_ws/src/install/ROS2/share/ament_index
+creating /home/marcin/anro_ws/src/install/ROS2/share/ament_index/resource_index
+creating /home/marcin/anro_ws/src/install/ROS2/share/ament_index/resource_index/packages
+copying resource/ROS2 -> /home/marcin/anro_ws/src/install/ROS2/share/ament_index/resource_index/packages
+copying package.xml -> /home/marcin/anro_ws/src/install/ROS2/share/ROS2
+creating /home/marcin/anro_ws/src/install/ROS2/share/ROS2/launch
+copying launch/my_turtle_node_launch.py -> /home/marcin/anro_ws/src/install/ROS2/share/ROS2/launch
+running install_egg_info
+Copying ../build/ROS2/ROS2.egg-info to /home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages/ROS2-0.0.0-py3.10.egg-info
+running install_scripts
+Installing my_turtle_node script to /home/marcin/anro_ws/src/install/ROS2/lib/ROS2
+writing list of installed files to '/home/marcin/anro_ws/src/build/ROS2/install.log'

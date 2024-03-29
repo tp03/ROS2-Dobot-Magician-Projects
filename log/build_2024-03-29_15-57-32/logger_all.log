@@ -1,0 +1,285 @@
+[0.081s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.082s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7d34e5524b80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7d34e5524640>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7d34e5524640>>)
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.228s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/marcin/anro_ws/src'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(ROS2) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package 'ROS2' with type 'ros.ament_python' and name 'ROS2'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ros'
+[0.241s] DEBUG:colcon.colcon_core.package_identification:Package 'joint_state_publisher' with type 'ros.ament_python' and name 'joint_state_publisher'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ros'
+[0.242s] DEBUG:colcon.colcon_core.package_identification:Package 'lab2' with type 'ros.ament_python' and name 'lab2'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ros'
+[0.243s] DEBUG:colcon.colcon_core.package_identification:Package 'urdf_tutorial' with type 'ros.ament_cmake' and name 'urdf_tutorial'
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.272s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/marcin/anro_ws/install
+[0.273s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 288 installed packages in /opt/ros/humble
+[0.274s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.287s] ERROR:colcon.colcon_core.package_augmentation:Exception in package augmentation extension 'python': 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/package_augmentation/__init__.py", line 97, in augment_packages
+    retval = extension.augment_packages(
+  File "/usr/lib/python3/dist-packages/colcon_installed_package_information/package_augmentation/python.py", line 44, in augment_packages
+    dist = next(iter(dists))
+StopIteration
+
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'cmake_args' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'cmake_target' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'cmake_clean_first' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'cmake_force_configure' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'ament_cmake_args' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'ROS2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.292s] DEBUG:colcon.colcon_core.verb:Building package 'ROS2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/marcin/anro_ws/src/build/ROS2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/marcin/anro_ws/src/install/ROS2', 'merge_install': False, 'path': '/home/marcin/anro_ws/src/ROS2', 'symlink_install': False, 'test_result_base': None}
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_target' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.293s] DEBUG:colcon.colcon_core.verb:Building package 'joint_state_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/marcin/anro_ws/src/build/joint_state_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/marcin/anro_ws/src/install/joint_state_publisher', 'merge_install': False, 'path': '/home/marcin/anro_ws/src/joint_state_publisher', 'symlink_install': False, 'test_result_base': None}
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_target' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_clean_first' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_force_configure' from command line to 'False'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'ament_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.293s] DEBUG:colcon.colcon_core.verb:Building package 'lab2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/marcin/anro_ws/src/build/lab2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/marcin/anro_ws/src/install/lab2', 'merge_install': False, 'path': '/home/marcin/anro_ws/src/lab2', 'symlink_install': False, 'test_result_base': None}
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_args' from command line to 'None'
+[0.293s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_target' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_clean_cache' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_clean_first' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_force_configure' from command line to 'False'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'ament_cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'catkin_cmake_args' from command line to 'None'
+[0.294s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.294s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_tutorial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/marcin/anro_ws/src/build/urdf_tutorial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/marcin/anro_ws/src/install/urdf_tutorial', 'merge_install': False, 'path': '/home/marcin/anro_ws/src/urdf_tutorial', 'symlink_install': False, 'test_result_base': None}
+[0.294s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.295s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.295s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/marcin/anro_ws/src/ROS2' with build type 'ament_python'
+[0.295s] Level 1:colcon.colcon_core.shell:create_environment_hook('ROS2', 'ament_prefix_path')
+[0.297s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.297s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/hook/ament_prefix_path.ps1'
+[0.298s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/hook/ament_prefix_path.dsv'
+[0.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/hook/ament_prefix_path.sh'
+[0.299s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.299s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.302s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/marcin/anro_ws/src/joint_state_publisher' with build type 'ament_python'
+[0.302s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher', 'ament_prefix_path')
+[0.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.ps1'
+[0.303s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.dsv'
+[0.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.sh'
+[0.303s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.304s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.306s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/marcin/anro_ws/src/lab2' with build type 'ament_python'
+[0.306s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2', 'ament_prefix_path')
+[0.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/lab2/share/lab2/hook/ament_prefix_path.ps1'
+[0.307s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/lab2/share/lab2/hook/ament_prefix_path.dsv'
+[0.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/lab2/share/lab2/hook/ament_prefix_path.sh'
+[0.308s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.308s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.311s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/marcin/anro_ws/src/urdf_tutorial' with build type 'ament_cmake'
+[0.311s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/marcin/anro_ws/src/urdf_tutorial'
+[0.311s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.311s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.536s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/marcin/anro_ws/src/ROS2'
+[0.536s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.536s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.760s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/marcin/anro_ws/src/joint_state_publisher'
+[0.761s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.761s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.985s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/marcin/anro_ws/src/lab2'
+[0.985s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.985s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/marcin/anro_ws/src/build/urdf_tutorial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marcin/anro_ws/install/lab2:/home/marcin/anro_ws/install/joint_state_publisher:/home/marcin/anro_ws/install/ROS2:/opt/ros/humble /usr/bin/cmake /home/marcin/anro_ws/src/urdf_tutorial -DCMAKE_INSTALL_PREFIX=/home/marcin/anro_ws/src/install/urdf_tutorial
+[1.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/marcin/anro_ws/src/ROS2': PYTHONPATH=/home/marcin/anro_ws/src/build/ROS2/prefix_override:/home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ROS2 build --build-base /home/marcin/anro_ws/src/build/ROS2/build install --record /home/marcin/anro_ws/src/build/ROS2/install.log --single-version-externally-managed install_data
+[1.341s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/marcin/anro_ws/src/joint_state_publisher': PYTHONPATH=/home/marcin/anro_ws/src/build/joint_state_publisher/prefix_override:/home/marcin/anro_ws/src/install/joint_state_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/joint_state_publisher build --build-base /home/marcin/anro_ws/src/build/joint_state_publisher/build install --record /home/marcin/anro_ws/src/build/joint_state_publisher/install.log --single-version-externally-managed install_data
+[1.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/marcin/anro_ws/src/lab2': PYTHONPATH=/home/marcin/anro_ws/src/build/lab2/prefix_override:/home/marcin/anro_ws/src/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/lab2 build --build-base /home/marcin/anro_ws/src/build/lab2/build install --record /home/marcin/anro_ws/src/build/lab2/install.log --single-version-externally-managed install_data
+[1.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/marcin/anro_ws/src/ROS2' returned '0': PYTHONPATH=/home/marcin/anro_ws/src/build/ROS2/prefix_override:/home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ROS2 build --build-base /home/marcin/anro_ws/src/build/ROS2/build install --record /home/marcin/anro_ws/src/build/ROS2/install.log --single-version-externally-managed install_data
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/ROS2' for CMake module files
+[1.659s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/ROS2' for CMake config files
+[1.659s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/ROS2/lib'
+[1.660s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/ROS2/bin'
+[1.660s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/ROS2/lib/pkgconfig/ROS2.pc'
+[1.660s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/ROS2/lib/python3.10/site-packages'
+[1.660s] Level 1:colcon.colcon_core.shell:create_environment_hook('ROS2', 'pythonpath')
+[1.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/hook/pythonpath.ps1'
+[1.661s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/hook/pythonpath.dsv'
+[1.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/hook/pythonpath.sh'
+[1.661s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/ROS2/bin'
+[1.661s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ROS2)
+[1.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/package.ps1'
+[1.662s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/package.dsv'
+[1.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/package.sh'
+[1.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/package.bash'
+[1.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/ROS2/share/ROS2/package.zsh'
+[1.664s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/marcin/anro_ws/src/install/ROS2/share/colcon-core/packages/ROS2)
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/joint_state_publisher' for CMake module files
+[1.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/marcin/anro_ws/src/joint_state_publisher' returned '0': PYTHONPATH=/home/marcin/anro_ws/src/build/joint_state_publisher/prefix_override:/home/marcin/anro_ws/src/install/joint_state_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/joint_state_publisher build --build-base /home/marcin/anro_ws/src/build/joint_state_publisher/build install --record /home/marcin/anro_ws/src/build/joint_state_publisher/install.log --single-version-externally-managed install_data
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/joint_state_publisher' for CMake config files
+[1.667s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/joint_state_publisher/lib'
+[1.667s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/joint_state_publisher/bin'
+[1.667s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/joint_state_publisher/lib/pkgconfig/joint_state_publisher.pc'
+[1.667s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/joint_state_publisher/lib/python3.10/site-packages'
+[1.667s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher', 'pythonpath')
+[1.667s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.ps1'
+[1.668s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.dsv'
+[1.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.sh'
+[1.668s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/joint_state_publisher/bin'
+[1.668s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joint_state_publisher)
+[1.668s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/package.ps1'
+[1.669s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/package.dsv'
+[1.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/package.sh'
+[1.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/package.bash'
+[1.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/joint_state_publisher/share/joint_state_publisher/package.zsh'
+[1.670s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/marcin/anro_ws/src/install/joint_state_publisher/share/colcon-core/packages/joint_state_publisher)
+[1.671s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/lab2' for CMake module files
+[1.671s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/marcin/anro_ws/src/lab2' returned '0': PYTHONPATH=/home/marcin/anro_ws/src/build/lab2/prefix_override:/home/marcin/anro_ws/src/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/lab2 build --build-base /home/marcin/anro_ws/src/build/lab2/build install --record /home/marcin/anro_ws/src/build/lab2/install.log --single-version-externally-managed install_data
+[1.671s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/lab2' for CMake config files
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/lab2/lib'
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/lab2/bin'
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/lab2/lib/pkgconfig/lab2.pc'
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/lab2/lib/python3.10/site-packages'
+[1.672s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2', 'pythonpath')
+[1.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/lab2/share/lab2/hook/pythonpath.ps1'
+[1.673s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/lab2/share/lab2/hook/pythonpath.dsv'
+[1.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/lab2/share/lab2/hook/pythonpath.sh'
+[1.673s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/lab2/bin'
+[1.673s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab2)
+[1.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/lab2/share/lab2/package.ps1'
+[1.674s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/marcin/anro_ws/src/install/lab2/share/lab2/package.dsv'
+[1.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/lab2/share/lab2/package.sh'
+[1.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/lab2/share/lab2/package.bash'
+[1.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/lab2/share/lab2/package.zsh'
+[1.675s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/marcin/anro_ws/src/install/lab2/share/colcon-core/packages/lab2)
+[1.776s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/marcin/anro_ws/src/build/urdf_tutorial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marcin/anro_ws/install/lab2:/home/marcin/anro_ws/install/joint_state_publisher:/home/marcin/anro_ws/install/ROS2:/opt/ros/humble /usr/bin/cmake /home/marcin/anro_ws/src/urdf_tutorial -DCMAKE_INSTALL_PREFIX=/home/marcin/anro_ws/src/install/urdf_tutorial
+[1.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/marcin/anro_ws/src/build/urdf_tutorial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marcin/anro_ws/install/lab2:/home/marcin/anro_ws/install/joint_state_publisher:/home/marcin/anro_ws/install/ROS2:/opt/ros/humble /usr/bin/cmake --build /home/marcin/anro_ws/src/build/urdf_tutorial -- -j16 -l16
+[1.815s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/marcin/anro_ws/src/build/urdf_tutorial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marcin/anro_ws/install/lab2:/home/marcin/anro_ws/install/joint_state_publisher:/home/marcin/anro_ws/install/ROS2:/opt/ros/humble /usr/bin/cmake --build /home/marcin/anro_ws/src/build/urdf_tutorial -- -j16 -l16
+[1.851s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/marcin/anro_ws/src/build/urdf_tutorial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marcin/anro_ws/install/lab2:/home/marcin/anro_ws/install/joint_state_publisher:/home/marcin/anro_ws/install/ROS2:/opt/ros/humble /usr/bin/cmake --install /home/marcin/anro_ws/src/build/urdf_tutorial
+[1.871s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_tutorial)
+[1.872s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial' for CMake module files
+[1.872s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/marcin/anro_ws/src/build/urdf_tutorial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marcin/anro_ws/install/lab2:/home/marcin/anro_ws/install/joint_state_publisher:/home/marcin/anro_ws/install/ROS2:/opt/ros/humble /usr/bin/cmake --install /home/marcin/anro_ws/src/build/urdf_tutorial
+[1.873s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial' for CMake config files
+[1.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_tutorial', 'cmake_prefix_path')
+[1.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.ps1'
+[1.873s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.dsv'
+[1.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.sh'
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/bin'
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/lib/pkgconfig/urdf_tutorial.pc'
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/lib/python3.10/site-packages'
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/bin'
+[1.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.ps1'
+[1.875s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.dsv'
+[1.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.sh'
+[1.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.bash'
+[1.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.zsh'
+[1.876s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/marcin/anro_ws/src/install/urdf_tutorial/share/colcon-core/packages/urdf_tutorial)
+[1.900s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_tutorial)
+[1.900s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial' for CMake module files
+[1.901s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial' for CMake config files
+[1.901s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_tutorial', 'cmake_prefix_path')
+[1.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.ps1'
+[1.901s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.dsv'
+[1.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.sh'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/bin'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/lib/pkgconfig/urdf_tutorial.pc'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/lib/python3.10/site-packages'
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/marcin/anro_ws/src/install/urdf_tutorial/bin'
+[1.903s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.ps1'
+[1.903s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.dsv'
+[1.903s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.sh'
+[1.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.bash'
+[1.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/marcin/anro_ws/src/install/urdf_tutorial/share/urdf_tutorial/package.zsh'
+[1.904s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/marcin/anro_ws/src/install/urdf_tutorial/share/colcon-core/packages/urdf_tutorial)
+[1.905s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.905s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.905s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.905s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.909s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.909s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.909s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.919s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.920s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/marcin/anro_ws/src/install/local_setup.ps1'
+[1.921s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/marcin/anro_ws/src/install/_local_setup_util_ps1.py'
+[1.922s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/marcin/anro_ws/src/install/setup.ps1'
+[1.923s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/marcin/anro_ws/src/install/local_setup.sh'
+[1.924s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/marcin/anro_ws/src/install/_local_setup_util_sh.py'
+[1.924s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/marcin/anro_ws/src/install/setup.sh'
+[1.925s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/marcin/anro_ws/src/install/local_setup.bash'
+[1.925s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/marcin/anro_ws/src/install/setup.bash'
+[1.926s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/marcin/anro_ws/src/install/local_setup.zsh'
+[1.926s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/marcin/anro_ws/src/install/setup.zsh'
