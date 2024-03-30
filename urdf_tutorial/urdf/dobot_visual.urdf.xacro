@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<robot name="macroedsad" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="base_link">
+      <visual>
+        <geometry>
+          <box size="0.158 0.158 0.05"/>
+        </geometry>
+        <material name = "red"/> 
+        <origin rpy="0 0 0" xyz="0 0 0.025"/>  
+      </visual>
+  </link>
+
+<material name="green">
+<color rgba="0 0.8 0 1"/>
+</material>
+
+<material name="red">
+<color rgba="0.8 0 0 1"/>
+</material>
+
+<material name="blue">
+  <color rgba="0 0 0.8 1"/>
+</material>
+  
+  <link name="front_label">
+      <visual>
+        <geometry>
+          <box size="0.003 0.06 0.03"/>
+        </geometry>
+        <material name = "blue"/>
+        <origin rpy="0 0 0" xyz="0.079 0 0.025"/> 
+      </visual>
+  </link>
+
+  <joint name="label" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_label"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="rotating_base">
+      <visual>
+        <geometry>
+          <cylinder length="0.1" radius="0.07"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="0 0 0.05"/> 
+      </visual>
+  </link>
+
+  <joint name="rotating_1_join" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1.548" upper="1.548" velocity="0.5"/>
+    <parent link="base_link"/>
+    <child link="rotating_base"/>
+    <origin xyz="0 0 0.05"/>
+  </joint>
+
+  <xacro:macro name="ver_arm" params="prefix arm_length y_rot">
+    <link name="${prefix}_arm">
+      <visual>
+        <geometry>
+          <cylinder length="${arm_length + 0.04}" radius="0.03"/>
+        </geometry>
+        <origin xyz="0 0 ${arm_length/2}" rpy="0 ${y_rot} 0"/>
+        <material name="green"/>
+      </visual>
+    </link>
+  </xacro:macro>
+
+  <xacro:macro name="hor_arm" params="prefix arm_length y_rot">
+    <link name="${prefix}_arm">
+      <visual>
+        <geometry>
+          <cylinder length="${arm_length + 0.02}" radius="0.03"/>
+        </geometry>
+        <origin xyz="${arm_length/2} 0 0" rpy="0 ${y_rot} 0"/>
+        <material name="green"/>
+      </visual>
+    </link>
+  </xacro:macro>
+
+  <xacro:ver_arm prefix="lower" arm_length="0.135" y_rot = "0"/>
+  <xacro:hor_arm prefix="upper" arm_length="0.147" y_rot = "1.57"/>
+
+  <joint name="arm_2_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="0" upper="1.483529864195" velocity="0.5"/>
+    <parent link="rotating_base"/>
+    <child link="lower_arm"/>
+    <origin xyz="0 0 0.088"/>
+  </joint>
+
+  <joint name="arm_3_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.1745329251994" upper="1.570796326795" velocity="0.5"/>
+    <parent link="lower_arm"/>
+    <child link="upper_arm"/>
+    <origin xyz="0 0 0.135"/>
+  </joint>
+
+  <link name="tool_base">
+      <visual>
+        <geometry>
+          <box size="0.08 0.045 0.055"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="0.02 0 0"/> 
+      </visual>
+  </link>
+
+  <joint name="tool_pos_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-1.570796326795" upper="0.1745329251994" velocity="0.5"/>
+    <parent link="upper_arm"/>
+    <child link="tool_base"/>
+    <origin xyz="0.147 0 0"/>
+  </joint>
+
+  <link name="tool_rot_base">
+      <visual>
+        <geometry>
+          <cylinder length="0.005" radius="0.02"/>
+        </geometry>
+        <material name = "green"/>
+        <origin rpy="0 0 0" xyz="0 0 -0.003"/> 
+      </visual>
+  </link>
+
+  <joint name="tool_rot_joint" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1.570796326795" upper="1.570796326795" velocity="0.5"/>
+    <parent link="tool_base"/>
+    <child link="tool_rot_base"/>
+    <origin xyz="0.03 0 -0.024"/>
+  </joint>
+
+  <link name="greeper">
+      <visual>
+        <geometry>
+          <box size="0.02 0.03 0.025"/>
+        </geometry>
+        <material name = "red"/>
+        <origin rpy="0 0 0" xyz="0 0 -0.002"/> 
+      </visual>
+  </link>
+
+  <link name="greeper_bonus">
+      <visual>
+        <geometry>
+          <box size="0.005 0.005 0.025"/>
+        </geometry>
+        <material name = "blue"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/> 
+      </visual>
+  </link>
+
+  <joint name="tool_elements" type="fixed">
+    <parent link="tool_rot_base"/>
+    <child link="greeper"/>
+    <origin xyz="0 0 -0.015"/>
+  </joint>
+
+  <joint name="tool_elements_2" type="fixed">
+    <parent link="greeper"/>
+    <child link="greeper_bonus"/>
+    <origin xyz="0.015 0 0"/>
+  </joint>
+
+</robot>
