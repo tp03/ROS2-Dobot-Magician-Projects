@@ -1,0 +1,19 @@
+robot_description:
+  package: urdf_tutorial
+  file: dobot_visual.urdf.xacro
+
+joint_limits:
+  joint1:
+    lower: -1.57
+    upper: 1.57
+  joint2:
+    lower: -1.57
+    upper: 1.57
+
+visual_properties:
+  base_link:
+    color: "${red}"  # RGBA color
+    geometry: {type: box, dimensions: [0.1, 0.1, 0.1]}
+  link2:
+    color: "${red}"
+    geometry: {type: cylinder, dimensions: [0.1, 0.2]}
