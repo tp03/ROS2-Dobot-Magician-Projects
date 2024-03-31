@@ -37,12 +37,13 @@ class ForwardKin(Node):
         #self.theta_vector[2] = self.theta_vector[2]-self.theta_vector[1]
         #self.theta_vector[3] = -(self.theta_vector[1]+self.theta_vector[2])
 
-        self.theta_vector[1] = self.theta_vector[1]-np.pi/2
-        self.theta_vector[2] = self.theta_vector[2]+np.pi/2
+        self.theta_vector[1] = -self.theta_vector[1] + np.pi/2
+        self.theta_vector[2] = -self.theta_vector[2]+np.pi/2+self.theta_vector[1]
+        self.theta_vector[3] = -(self.theta_vector[1]+self.theta_vector[2])
 
         d = [0.05, 0.088, 0, 0, self.link4_length]
         a = [0, 0, self.link2_length, self.link3_length, 0]
-        alpha = [0, -np.pi/2, 0, 0, -np.pi/2]
+        alpha = [0, -np.pi/2, 0, 0, -np.pi/2]   
 
         matrixes = []
 
