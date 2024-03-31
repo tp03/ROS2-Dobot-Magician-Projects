@@ -37,13 +37,15 @@ class ForwardKin(Node):
         #self.theta_vector[2] = self.theta_vector[2]-self.theta_vector[1]
         #self.theta_vector[3] = -(self.theta_vector[1]+self.theta_vector[2])
 
-        self.theta_vector[1] = -self.theta_vector[1] + np.pi/2
-        self.theta_vector[2] = -self.theta_vector[2]+np.pi/2+self.theta_vector[1]
-        self.theta_vector[3] = -(self.theta_vector[1]+self.theta_vector[2])
+        self.theta_vector[1] = self.theta_vector[1] + np.pi/2
+        self.theta_vector[2] = -self.theta_vector[2]+self.theta_vector[1]-np.pi/2
+        self.theta_vector[3] = -self.theta_vector[3]
 
-        d = [0.05, 0.088, 0, 0, self.link4_length]
+        d = [0.05, 0.88, 0, 0, 0]
         a = [0, 0, self.link2_length, self.link3_length, 0]
-        alpha = [0, -np.pi/2, 0, 0, -np.pi/2]   
+        alpha = [0, np.pi/2, 0, 0, np.pi/2]   
+
+        self.get_logger().info('Published end effector pose:\n{}'.format(self.theta_vector))
 
         matrixes = []
 
@@ -75,7 +77,6 @@ class ForwardKin(Node):
         end_pose.pose.orientation.z = quaternion[2]
         end_pose.pose.orientation.w = quaternion[3]
         self.pose_publisher.publish(end_pose)
-        self.get_logger().info('Published end effector pose:\n{}'.format(end_pose))
 
 def main(args=None):
 
