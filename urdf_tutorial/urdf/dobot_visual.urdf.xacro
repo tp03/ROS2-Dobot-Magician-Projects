@@ -1,12 +1,33 @@
 <?xml version="1.0"?>
 <robot name="macroedsad" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="links_size" value="${xacro.load_yaml('/home/marcin/anro_ws/src/urdf_tutorial/parameters/dobot_params.yaml')['links_size']}"/>
+  <xacro:property name="limits" value="${xacro.load_yaml('/home/marcin/anro_ws/src/urdf_tutorial/parameters/dobot_params.yaml')['joints_limits']}"/>
+  
+  <xacro:property name="link0_height" value="${links_size['link0']['length']}" />
+  <xacro:property name="link1_height" value="${links_size['link1']['length']}" />
+  <xacro:property name="link2_length" value="${links_size['link2']['length']}" />
+  <xacro:property name="link3_length" value="${links_size['link3']['length']}"/>
+  <xacro:property name="link4_length" value="${links_size['link4']['length']}"/>
+
+  <xacro:property name="joint0_min" value="${limits['joint0']['min']}" />
+  <xacro:property name="joint0_max" value="${limits['joint0']['max']}" />
+  <xacro:property name="joint1_min" value="${limits['joint1']['min']}" />
+  <xacro:property name="joint1_max" value="${limits['joint1']['max']}" />
+  <xacro:property name="joint2_min" value="${limits['joint2']['min']}" />
+  <xacro:property name="joint2_max" value="${limits['joint2']['max']}" />
+  <xacro:property name="joint3_min" value="${limits['joint3']['min']}" />
+  <xacro:property name="joint3_max" value="${limits['joint3']['max']}" />
+  <xacro:property name="joint4_min" value="${limits['joint4']['min']}" />
+  <xacro:property name="joint4_max" value="${limits['joint4']['max']}" />
+
   <link name="base_link">
       <visual>
         <geometry>
-          <box size="0.158 0.158 0.05"/>
+          <box size="0.158 0.158 ${link0_height}"/>
         </geometry>
         <material name = "red"/> 
-        <origin rpy="0 0 0" xyz="0 0 0.025"/>  
+        <origin rpy="0 0 0" xyz="0 0 ${link0_height / 2}"/>  
       </visual>
   </link>
 
@@ -25,10 +46,10 @@
   <link name="front_label">
       <visual>
         <geometry>
-          <box size="0.003 0.06 0.03"/>
+          <box size="0.003 0.06 ${link0_height - 0.02}"/>
         </geometry>
         <material name = "blue"/>
-        <origin rpy="0 0 0" xyz="0.079 0 0.025"/> 
+        <origin rpy="0 0 0" xyz="0.079 0 ${link0_height / 2}"/> 
       </visual>
   </link>
 
@@ -41,19 +62,19 @@
   <link name="rotating_base">
       <visual>
         <geometry>
-          <cylinder length="0.1" radius="0.07"/>
+          <cylinder length="${link1_height}" radius="0.07"/>
         </geometry>
         <material name = "red"/>
-        <origin rpy="0 0 0" xyz="0 0 0.05"/> 
+        <origin rpy="0 0 0" xyz="0 0 ${link1_height / 2}"/> 
       </visual>
   </link>
 
   <joint name="rotating_1_join" type="revolute">
     <axis xyz="0 0 1"/>
-    <limit effort="1000.0" lower="-1.548" upper="1.548" velocity="0.5"/>
+    <limit effort="1000.0" lower="${joint0_min}" upper="${joint0_max}" velocity="0.5"/>
     <parent link="base_link"/>
     <child link="rotating_base"/>
-    <origin xyz="0 0 0.05"/>
+    <origin xyz="0 0 ${link0_height}"/>
   </joint>
 
   <xacro:macro name="ver_arm" params="prefix arm_length y_rot">
@@ -80,41 +101,41 @@
     </link>
   </xacro:macro>
 
-  <xacro:ver_arm prefix="lower" arm_length="0.135" y_rot = "0"/>
-  <xacro:hor_arm prefix="upper" arm_length="0.147" y_rot = "1.57"/>
+  <xacro:ver_arm prefix="lower" arm_length="${link2_length}" y_rot = "0"/>
+  <xacro:hor_arm prefix="upper" arm_length="${link3_length}" y_rot = "1.57"/>
 
   <joint name="arm_2_joint" type="revolute">
     <axis xyz="0 1 0"/>
-    <limit effort="1000.0" lower="0" upper="1.483529864195" velocity="0.5"/>
+    <limit effort="1000.0" lower="${joint1_min}" upper="${joint1_max}" velocity="0.5"/>
     <parent link="rotating_base"/>
     <child link="lower_arm"/>
-    <origin xyz="0 0 0.088"/>
+    <origin xyz="0 0 ${link1_height}"/>
   </joint>
 
   <joint name="arm_3_joint" type="revolute">
     <axis xyz="0 1 0"/>
-    <limit effort="1000.0" lower="-0.1745329251994" upper="1.570796326795" velocity="0.5"/>
+    <limit effort="1000.0" lower="${joint2_min}" upper="${joint2_max}" velocity="0.5"/>
     <parent link="lower_arm"/>
     <child link="upper_arm"/>
-    <origin xyz="0 0 0.135"/>
+    <origin xyz="0 0 ${link2_length}"/>
   </joint>
 
   <link name="tool_base">
       <visual>
         <geometry>
-          <box size="0.08 0.045 0.055"/>
+          <box size="${link4_length} 0.045 0.055"/>
         </geometry>
         <material name = "red"/>
-        <origin rpy="0 0 0" xyz="0.02 0 0"/> 
+        <origin rpy="0 0 0" xyz="${link4_length / 2 - 0.02} 0 0"/> 
       </visual>
   </link>
 
   <joint name="tool_pos_joint" type="revolute">
     <axis xyz="0 1 0"/>
-    <limit effort="1000.0" lower="-1.570796326795" upper="0.1745329251994" velocity="0.5"/>
+    <limit effort="1000.0" lower="${joint3_min}" upper="${joint3_max}" velocity="0.5"/>
     <parent link="upper_arm"/>
     <child link="tool_base"/>
-    <origin xyz="0.147 0 0"/>
+    <origin xyz="${link3_length} 0 0"/>
   </joint>
 
   <link name="tool_rot_base">
@@ -129,7 +150,7 @@
 
   <joint name="tool_rot_joint" type="revolute">
     <axis xyz="0 0 1"/>
-    <limit effort="1000.0" lower="-1.570796326795" upper="1.570796326795" velocity="0.5"/>
+    <limit effort="1000.0" lower="${joint4_min}" upper="${joint4_max}" velocity="0.5"/>
     <parent link="tool_base"/>
     <child link="tool_rot_base"/>
     <origin xyz="0.03 0 -0.024"/>
