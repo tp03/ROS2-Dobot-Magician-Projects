@@ -4,7 +4,6 @@ import numpy as np
 from numpy import sin, cos 
 from geometry_msgs.msg import PoseStamped
 from sensor_msgs.msg import JointState
-from geometry_msgs.msg import Quaternion
 from scipy.spatial.transform import Rotation as R
 
 
@@ -15,37 +14,10 @@ class ForwardKin(Node):
         
         self.pose_publisher = self.create_publisher(PoseStamped, 'end_effector_pose', 10)
         self.joint_subscriber = self.create_subscription(JointState, 'joint_states', self.joint_states_callback, 10)
-        
-        self.link1_length = 0.138
-        self.link2_length = 0.135
-        self.link3_length = 0.147
-        self.link4_length = 0.05
-
         self.theta_vector = []
-
-    def make_matrix(self, d_i, a_i, alpha_i, theta_i):
-        a = np.matrix([[cos(theta_i), -sin(theta_i), 0, a_i],
-                      [sin(theta_i)*cos(alpha_i), cos(alpha_i)*cos(theta_i), -sin(alpha_i), -d_i*sin(alpha_i)],
-                      [sin(theta_i)*sin(alpha_i), cos(theta_i)*sin(alpha_i), cos(alpha_i), d_i*cos(alpha_i)],
-                      [0, 0, 0, 1]])
-        return a
 
     def calculate_position(self):
         joint_count = len(self.theta_vector)
-
-        #self.theta_vector[4] = -self.theta_vector[3]
-        #self.theta_vector[2] = self.theta_vector[2]-self.theta_vector[1]
-        #self.theta_vector[3] = -(self.theta_vector[1]+self.theta_vector[2])
-
-        # self.theta_vector[1] = -self.theta_vector[1]
-        # self.theta_vector[2] = -self.theta_vector[2]
-        # self.theta_vector[3] = -self.theta_vector[3]
-
-        d = [0.05, 0.88, 0, 0, 0]
-        a = [0, 0, self.link2_length, self.link3_length, 0]
-        alpha = [0, np.pi/2, 0, 0, np.pi/2]   
-
-        self.get_logger().info('Published end effector pose:\n{}'.format(self.theta_vector))
 
         matrixes = []
 
@@ -58,7 +30,7 @@ class ForwardKin(Node):
         matrixes.append(np.matrix([
                     [1, 0, 0, 0],
                     [0, cos(self.theta_vector[1]), -sin(self.theta_vector[1]), 0],
-                    [0, sin(self.theta_vector[1]), cos(self.theta_vector[1]), 0.088],
+                    [0, sin(self.theta_vector[1]), cos(self.theta_vector[1]), 0.088-0.01],
                     [0, 0, 0, 1]
         ]))
 
@@ -72,13 +44,13 @@ class ForwardKin(Node):
         matrixes.append(np.matrix([
                     [1, 0, 0, 0],
                     [0, cos(self.theta_vector[3]), -sin(self.theta_vector[3]), 0],
-                    [0, sin(self.theta_vector[3]), cos(self.theta_vector[3]), 0.147],
+                    [0, sin(self.theta_vector[3]), cos(self.theta_vector[3]), 0.147+0.025],
                     [0, 0, 0, 1]
         ]))
 
         matrixes.append(np.matrix([[cos(self.theta_vector[4]), -sin(self.theta_vector[4]), 0, 0],
                                    [sin(self.theta_vector[4]), cos(self.theta_vector[4]), 0, 0],
-                                   [0, 0, 1, 0.05],
+                                   [0, 0, 1, 0.025],
                                    [0, 0, 0, 1]                                   
                                    ]))
 
@@ -87,7 +59,6 @@ class ForwardKin(Node):
             matrixes[i+1] = R
         
         result = matrixes[4]
-        print(matrixes[4])
         return result
         
     def joint_states_callback(self, msg):

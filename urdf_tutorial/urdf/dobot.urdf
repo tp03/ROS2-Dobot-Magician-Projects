@@ -63,7 +63,7 @@
   
   <link name="link_1">
     <visual>
-     <origin xyz="0 0 ${link0_heigth}" rpy="0 0 0"/>
+     <origin xyz="0 0 ${link1_heigth/2}" rpy="0 0 0"/>
      <geometry>
       <box size="${link1_width} ${link1_width} ${link1_heigth}"/>
      </geometry>
@@ -75,13 +75,13 @@
    <parent link="link_1"/>
    <child link="link_2"/>
    <axis xyz="1 0 0"/>
-   <origin xyz="0 0 ${link1_heigth-0.01}" rpy="0 0 0"/>
+   <origin xyz="0 0 ${link1_heigth}" rpy="0 0 0"/>
    <limit effort="1000.0" lower="0" upper="-1.48" velocity="0.5"/>
   </joint>
   
   <link name="link_2">
    <visual>
-    <origin xyz="0 0 ${link1_heigth}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${link2_length/2}" rpy="0 0 0"/>
     <geometry>
      <cylinder length="${link2_length}" radius="${link2_width/2}"/>
     </geometry>
@@ -94,12 +94,12 @@
    <child link="link_3"/>
    <axis xyz="1 0 0"/>
    <origin xyz="0 0 ${link2_length}" rpy="0 0 0"/>
-   <limit effort="1000.0" lower="0" upper="-1.74" velocity="0.5"/>
+   <limit effort="1000.0" lower="-0.654" upper="-2.413" velocity="0.5"/>
   </joint>
   
   <link name="link_3">
    <visual>
-    <origin xyz="0 0 ${link1_heigth}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${link3_length/2}" rpy="0 0 0"/>
     <geometry>
      <cylinder length="${link3_length}" radius="${link3_width/2}"/>
     </geometry>
@@ -111,13 +111,13 @@
    <parent link="link_3"/>
    <child link="link_4"/>
    <axis xyz="1 0 0"/>
-   <origin xyz="0 0 ${link3_length+0.025}" rpy="0 0 0"/>
-   <limit effort="1000.0" lower="0" upper="-1.5" velocity="0.5"/>
+   <origin xyz="0 0 ${link3_length}" rpy="0 0 0"/>
+   <limit effort="1000.0" lower="-0.3" upper="-1.7" velocity="0.5"/>
   </joint>
   
   <link name="link_4">
    <visual>
-    <origin xyz="0 0 ${link0_heigth/2}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${link4_length/2}" rpy="0 0 0"/>
     <geometry>
      <cylinder length="${link4_length}" radius="${link4_width/2}"/>
     </geometry>
@@ -133,7 +133,7 @@
   
   <link name="link_5">
    <visual>
-    <origin xyz="0 0 ${link4_length}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${link4_length/2}" rpy="0 0 0"/>
     <geometry>
      <cylinder length="0" radius="0"/>
     </geometry>

@@ -63,7 +63,7 @@
   
   <link name="link_1">
     <visual>
-     <origin xyz="0 0 ${link0_heigth}" rpy="0 0 0"/>
+     <origin xyz="0 0 ${link1_heigth/2}" rpy="0 0 0"/>
      <geometry>
       <box size="${link1_width} ${link1_width} ${link1_heigth}"/>
      </geometry>
@@ -81,7 +81,7 @@
   
   <link name="link_2">
    <visual>
-    <origin xyz="0 0 ${link1_heigth}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${link2_length/2}" rpy="0 0 0"/>
     <geometry>
      <cylinder length="${link2_length}" radius="${link2_width/2}"/>
     </geometry>
@@ -99,7 +99,7 @@
   
   <link name="link_3">
    <visual>
-    <origin xyz="0 0 ${link1_heigth}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${link3_length/2}" rpy="0 0 0"/>
     <geometry>
      <cylinder length="${link3_length}" radius="${link3_width/2}"/>
     </geometry>
@@ -117,7 +117,7 @@
   
   <link name="link_4">
    <visual>
-    <origin xyz="0 0 ${link0_heigth/2}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${link4_length/2-0.025}" rpy="0 0 0"/>
     <geometry>
      <cylinder length="${link4_length}" radius="${link4_width/2}"/>
     </geometry>
@@ -133,7 +133,7 @@
   
   <link name="link_5">
    <visual>
-    <origin xyz="0 0 ${link4_length}" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
      <cylinder length="0" radius="0"/>
     </geometry>
@@ -186,3 +186,4 @@
   </joint>
   
 </robot>
+
