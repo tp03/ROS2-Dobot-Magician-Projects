@@ -37,9 +37,9 @@ class ForwardKin(Node):
         #self.theta_vector[2] = self.theta_vector[2]-self.theta_vector[1]
         #self.theta_vector[3] = -(self.theta_vector[1]+self.theta_vector[2])
 
-        self.theta_vector[1] = self.theta_vector[1] + np.pi/2
-        self.theta_vector[2] = -self.theta_vector[2]+self.theta_vector[1]-np.pi/2
-        self.theta_vector[3] = -self.theta_vector[3]
+        # self.theta_vector[1] = -self.theta_vector[1]
+        # self.theta_vector[2] = -self.theta_vector[2]
+        # self.theta_vector[3] = -self.theta_vector[3]
 
         d = [0.05, 0.88, 0, 0, 0]
         a = [0, 0, self.link2_length, self.link3_length, 0]
@@ -49,8 +49,38 @@ class ForwardKin(Node):
 
         matrixes = []
 
-        for i in range(joint_count):
-            matrixes.append(self.make_matrix(d[i], a[i], alpha[i], self.theta_vector[i]))
+        matrixes.append(np.matrix([[cos(self.theta_vector[0]), -sin(self.theta_vector[0]), 0, 0],
+                                   [sin(self.theta_vector[0]), cos(self.theta_vector[0]), 0, 0],
+                                   [0, 0, 1, 0.05],
+                                   [0, 0, 0, 1]                                   
+                                   ]))
+        
+        matrixes.append(np.matrix([
+                    [1, 0, 0, 0],
+                    [0, cos(self.theta_vector[1]), -sin(self.theta_vector[1]), 0],
+                    [0, sin(self.theta_vector[1]), cos(self.theta_vector[1]), 0.088],
+                    [0, 0, 0, 1]
+        ]))
+
+        matrixes.append(np.matrix([
+                    [1, 0, 0, 0],
+                    [0, cos(self.theta_vector[2]), -sin(self.theta_vector[2]), 0],
+                    [0, sin(self.theta_vector[2]), cos(self.theta_vector[2]), 0.135],
+                    [0, 0, 0, 1]
+        ]))
+
+        matrixes.append(np.matrix([
+                    [1, 0, 0, 0],
+                    [0, cos(self.theta_vector[3]), -sin(self.theta_vector[3]), 0],
+                    [0, sin(self.theta_vector[3]), cos(self.theta_vector[3]), 0.147],
+                    [0, 0, 0, 1]
+        ]))
+
+        matrixes.append(np.matrix([[cos(self.theta_vector[4]), -sin(self.theta_vector[4]), 0, 0],
+                                   [sin(self.theta_vector[4]), cos(self.theta_vector[4]), 0, 0],
+                                   [0, 0, 1, 0.05],
+                                   [0, 0, 0, 1]                                   
+                                   ]))
 
         for i in range(joint_count-1):
             R = np.matmul(matrixes[i], matrixes[i+1])
