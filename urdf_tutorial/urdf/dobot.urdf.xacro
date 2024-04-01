@@ -2,16 +2,22 @@
  
 <robot name="dobot" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:property name="config_file" value="/home/tp03/anro_ws/src/urdf_tutorial/urdf_variables/variables.yaml" />
-  <xacro:property name="config_dict" value="${xacro.load_yaml('variables.yaml')}"/>
+  <xacro:property name="config_dict" value="${xacro.load_yaml('/home/tp03/anro_ws/src/urdf_tutorial/urdf_variables/variables.yaml')}"/>
 
   
-  <xacro:property name="link0_heigth" value="${config_dict['link0']['length']}" />
-  <xacro:property name="link1_heigth" value="${config_dict['link1']['length']}" />
-  <xacro:property name="link2_length" value="${config_dict['link2']['length']}" />
-  <xacro:property name="link3_length" value="${config_dict['link3']['length']}"/>
-  <xacro:property name="link4_length" value="${config_dict['link4']['length']}"/>
-  
+  <xacro:property name="link0_heigth" value="${config_dict['link']['link0']['length']}" />
+  <xacro:property name="link1_heigth" value="${config_dict['link']['link1']['length']}" />
+  <xacro:property name="link2_length" value="${config_dict['link']['link2']['length']}" />
+  <xacro:property name="link3_length" value="${config_dict['link']['link3']['length']}"/>
+  <xacro:property name="link4_length" value="${config_dict['link']['link4']['length']}"/>
+  <xacro:property name="joint1_lower" value="${config_dict['joint']['joint1']['lower_limit']}" />
+  <xacro:property name="joint1_upper" value="${config_dict['joint']['joint1']['upper_limit']}" />
+  <xacro:property name="joint2_lower" value="${config_dict['joint']['joint2']['lower_limit']}" />
+  <xacro:property name="joint2_upper" value="${config_dict['joint']['joint2']['upper_limit']}" />
+  <xacro:property name="joint3_lower" value="${config_dict['joint']['joint3']['lower_limit']}" />
+  <xacro:property name="joint3_upper" value="${config_dict['joint']['joint3']['upper_limit']}" />
+  <xacro:property name="joint4_lower" value="${config_dict['joint']['joint4']['lower_limit']}" />
+  <xacro:property name="joint4_upper" value="${config_dict['joint']['joint4']['upper_limit']}" />
   
   <xacro:property name="link0_width" value="0.15" />
   <xacro:property name="link1_width" value="0.1" />
@@ -58,7 +64,7 @@
    <parent link="link_0"/>
    <child link="link_1"/>
    <axis xyz="0 0 1"/>
-   <limit effort="1000.0" lower="1.57" upper="-1.57" velocity="0.5"/>
+   <limit effort="1000.0" lower="${joint1_lower}" upper="${joint1_upper}" velocity="0.5"/>
   </joint>
   
   <link name="link_1">
@@ -76,7 +82,7 @@
    <child link="link_2"/>
    <axis xyz="1 0 0"/>
    <origin xyz="0 0 ${link1_heigth-0.01}" rpy="0 0 0"/>
-   <limit effort="1000.0" lower="0" upper="-1.48" velocity="0.5"/>
+   <limit effort="1000.0" lower="${joint2_lower}" upper="${joint2_upper}" velocity="0.5"/>
   </joint>
   
   <link name="link_2">
@@ -94,7 +100,7 @@
    <child link="link_3"/>
    <axis xyz="1 0 0"/>
    <origin xyz="0 0 ${link2_length}" rpy="0 0 0"/>
-   <limit effort="1000.0" lower="-0.654" upper="-2.413" velocity="0.5"/>
+   <limit effort="1000.0" lower="${joint3_lower}" upper="${joint3_upper}" velocity="0.5"/>
   </joint>
   
   <link name="link_3">
@@ -112,7 +118,7 @@
    <child link="link_4"/>
    <axis xyz="1 0 0"/>
    <origin xyz="0 0 ${link3_length+0.025}" rpy="0 0 0"/>
-   <limit effort="1000.0" lower="0" upper="-1.5" velocity="0.5"/>
+   <limit effort="1000.0" lower="${joint4_lower}" upper="${joint4_upper}" velocity="0.5"/>
   </joint>
   
   <link name="link_4">
