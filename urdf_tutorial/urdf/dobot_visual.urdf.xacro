@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot name="macroedsad" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:property name="links_size" value="${xacro.load_yaml('/home/marcin/anro_ws/src/urdf_tutorial/parameters/dobot_params.yaml')['links_size']}"/>
-  <xacro:property name="limits" value="${xacro.load_yaml('/home/marcin/anro_ws/src/urdf_tutorial/parameters/dobot_params.yaml')['joints_limits']}"/>
+  <xacro:property name="links_size" value="${xacro.load_yaml('$(find urdf_tutorial)/parameters/dobot_params.yaml')['links_size']}"/>
+  <xacro:property name="limits" value="${xacro.load_yaml('$(find urdf_tutorial)/parameters/dobot_params.yaml')['joints_limits']}"/>
   
   <xacro:property name="link0_height" value="${links_size['link0']['length']}" />
   <xacro:property name="link1_height" value="${links_size['link1']['length']}" />
@@ -123,10 +123,10 @@
   <link name="tool_base">
       <visual>
         <geometry>
-          <box size="${link4_length} 0.045 0.055"/>
+          <box size="${link4_length} 0.025 0.055"/>
         </geometry>
         <material name = "red"/>
-        <origin rpy="0 0 0" xyz="${link4_length / 2 - 0.02} 0 0"/> 
+        <origin rpy="0 0 0" xyz="${link4_length / 2} 0 0"/> 
       </visual>
   </link>
 
@@ -159,20 +159,20 @@
   <link name="greeper">
       <visual>
         <geometry>
-          <box size="0.02 0.03 0.025"/>
+          <box size="0.1 0.03 0.040"/>
         </geometry>
         <material name = "red"/>
-        <origin rpy="0 0 0" xyz="0 0 -0.002"/> 
+        <origin rpy="0 0 0" xyz="0 0 -0.01"/> 
       </visual>
   </link>
 
   <link name="greeper_bonus">
       <visual>
         <geometry>
-          <box size="0.005 0.005 0.025"/>
+          <box size="0.007 0.02 0.040"/>
         </geometry>
         <material name = "blue"/>
-        <origin rpy="0 0 0" xyz="0 0 0"/> 
+        <origin rpy="0 0 0" xyz="0.03 -0.0025 -0.005"/> 
       </visual>
   </link>
 

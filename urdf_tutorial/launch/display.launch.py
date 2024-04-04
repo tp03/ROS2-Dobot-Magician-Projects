@@ -13,9 +13,6 @@ def generate_launch_description():
     default_rviz_config_path = PathJoinSubstitution(['dobot_config.rviz'])
 
     # These parameters are maintained for backwards compatibility
-    gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
-                                    description='Flag to enable joint_state_publisher_gui')
-    ld.add_action(gui_arg)
     rviz_arg = DeclareLaunchArgument(name='rviz', default_value=default_rviz_config_path,
                                      description='Absolute path to rviz config file')
     ld.add_action(rviz_arg)
@@ -29,14 +26,21 @@ def generate_launch_description():
         launch_arguments={
             'urdf_package': 'urdf_tutorial',
             'urdf_package_path': PathJoinSubstitution(['urdf', LaunchConfiguration('model')]),
-            'rviz_config': PathJoinSubstitution([urdf_tutorial_path, 'rviz', LaunchConfiguration('rviz')]),
-            'jsp_gui': LaunchConfiguration('gui')}.items()
+            'rviz_config': PathJoinSubstitution([urdf_tutorial_path, 'rviz', LaunchConfiguration('rviz')]),}.items()
     ))
 
+    ld.add_action(Node(
+            package='angle_translator',
+            executable='angle_translator',
+            name='my_node1',
+        ),)
+    
     ld.add_action(Node(
             package='ForwardKin',
             executable='ForwardKin',
             name='my_node',
         ),)
+
+    
 
     return ld
