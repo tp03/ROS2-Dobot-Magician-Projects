@@ -2,6 +2,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
+from launch_ros.actions import Node
 
 
 def generate_launch_description():
@@ -12,9 +13,9 @@ def generate_launch_description():
     default_rviz_config_path = PathJoinSubstitution([urdf_tutorial_path, 'rviz', 'urdf.rviz'])
 
     # These parameters are maintained for backwards compatibility
-    gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
-                                    description='Flag to enable joint_state_publisher_gui')
-    ld.add_action(gui_arg)
+    # gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
+    #                                 description='Flag to enable joint_state_publisher_gui')
+    # ld.add_action(gui_arg)
     rviz_arg = DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
                                      description='Absolute path to rviz config file')
     ld.add_action(rviz_arg)
@@ -28,9 +29,28 @@ def generate_launch_description():
         launch_arguments={
             'urdf_package': 'urdf_tutorial',
             'urdf_package_path': LaunchConfiguration('model'),
-            'rviz_config': LaunchConfiguration('rvizconfig'),
-            'jsp_gui': LaunchConfiguration('gui')}.items()
+            'rviz_config': LaunchConfiguration('rvizconfig'),}.items()
+            # 'jsp_gui': LaunchConfiguration('gui')}.items()
     ))
+
+    ld.add_action(Node(
+            package='angle_translator',
+            executable='angle_translator',
+            name='my_node1',
+        ),)
+    
+    ld.add_action(Node(
+            package='ForwardKin',
+            executable='ForwardKin',
+            name='my_node',
+        ),)
+    
+    ld.add_action(Node(
+            package='inverse_kin',
+            executable='inverse_kin',
+            name='my_node2',
+        ),)
+
 
     return ld
 

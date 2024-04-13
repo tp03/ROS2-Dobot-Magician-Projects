@@ -28,37 +28,45 @@ class ForwardKin(Node):
                                    ]))
         
         matrixes.append(np.matrix([
-                    [1, 0, 0, 0],
-                    [0, cos(self.theta_vector[1]), -sin(self.theta_vector[1]), 0],
-                    [0, sin(self.theta_vector[1]), cos(self.theta_vector[1]), 0.088-0.01],
+                    [cos(self.theta_vector[1]), 0, sin(self.theta_vector[1]), 0],
+                    [0, 1, 0, 0],
+                    [-sin(self.theta_vector[1]), 0, cos(self.theta_vector[1]), 0.088],
                     [0, 0, 0, 1]
         ]))
 
         matrixes.append(np.matrix([
-                    [1, 0, 0, 0],
-                    [0, cos(self.theta_vector[2]), -sin(self.theta_vector[2]), 0],
-                    [0, sin(self.theta_vector[2]), cos(self.theta_vector[2]), 0.135],
+                    [cos(self.theta_vector[2]), 0, sin(self.theta_vector[2]), 0],
+                    [0, 1, 0, 0],
+                    [-sin(self.theta_vector[2]), 0, cos(self.theta_vector[2]), 0.135],
                     [0, 0, 0, 1]
         ]))
 
         matrixes.append(np.matrix([
-                    [1, 0, 0, 0],
-                    [0, cos(self.theta_vector[3]), -sin(self.theta_vector[3]), 0],
-                    [0, sin(self.theta_vector[3]), cos(self.theta_vector[3]), 0.147+0.025],
+                    [cos(self.theta_vector[3]), 0, sin(self.theta_vector[3]), 0.147],
+                    [0, 1, 0, 0],
+                    [-sin(self.theta_vector[3]), 0, cos(self.theta_vector[3]), 0],
                     [0, 0, 0, 1]
         ]))
 
-        matrixes.append(np.matrix([[cos(self.theta_vector[4]), -sin(self.theta_vector[4]), 0, 0],
+        matrixes.append(np.matrix([[cos(self.theta_vector[4]), -sin(self.theta_vector[4]), 0, 0.03],
                                    [sin(self.theta_vector[4]), cos(self.theta_vector[4]), 0, 0],
-                                   [0, 0, 1, 0.025],
+                                   [0, 0, 1, -0.024-0.04],
                                    [0, 0, 0, 1]                                   
                                    ]))
 
-        for i in range(joint_count-1):
+        matrixes.append(np.matrix([
+                    [1, 0, 0, 0],
+                    [0, cos(np.pi), -sin(np.pi), 0],
+                    [0, sin(np.pi), cos(np.pi), 0],
+                    [0, 0, 0, 1]
+        ]))
+        
+
+        for i in range(joint_count):
             R = np.matmul(matrixes[i], matrixes[i+1])
             matrixes[i+1] = R
         
-        result = matrixes[4]
+        result = matrixes[5]
         return result
         
     def joint_states_callback(self, msg):
@@ -91,7 +99,3 @@ def main(args=None):
 if __name__ == "__main__":
     main()
 
-
-
-
-    
