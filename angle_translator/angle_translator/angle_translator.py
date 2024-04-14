@@ -11,6 +11,7 @@ class angle_translator(Node):
 
         self.theta_vector = []
         self.answer_vector = [1, 1, 1, 1, 1]
+        
 
 
     def listener_callback(self, msg):
