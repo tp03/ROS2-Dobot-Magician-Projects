@@ -50,7 +50,7 @@ class ForwardKin(Node):
 
         matrixes.append(np.matrix([[cos(self.theta_vector[4]), -sin(self.theta_vector[4]), 0, 0.03],
                                    [sin(self.theta_vector[4]), cos(self.theta_vector[4]), 0, 0],
-                                   [0, 0, 1, -0.024-0.04],
+                                   [0, 0, 1, -0.024-0.04-0.005],
                                    [0, 0, 0, 1]                                   
                                    ]))
 
