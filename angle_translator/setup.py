@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'lab2'
+package_name = 'angle_translator'
 
 setup(
     name=package_name,
@@ -15,13 +15,12 @@ setup(
     zip_safe=True,
     maintainer='tp03',
     maintainer_email='zalewski.tomek03@gmail.com',
-    description='tower creator for DOBOT',
-    license='Apache-2.0',
+    description='TODO: Package description',
+    license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pick_place = lab2.pick_place:main'
-            'tower_builder = lab2.tower_builder:main'
+            'angle_translator = angle_translator.angle_translator:main'
         ],
     },
 )
