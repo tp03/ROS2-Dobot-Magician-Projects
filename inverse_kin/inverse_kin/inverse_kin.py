@@ -68,6 +68,7 @@ class inverse_kin(Node):
         if theta1 < -1.548 or theta1 > 1.548 or theta2 < 0 or theta2 > 1.484 or theta3 < -0.175 or theta3 > 1.571:
             for i in range (5):
                 self.angle_vector[i] = 0.0
+            self.get_logger().info("One of angles out of possible range.")
         else:
             self.angle_vector[0] = theta1
             self.angle_vector[1] = theta2
