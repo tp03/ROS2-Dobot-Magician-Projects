@@ -24,7 +24,7 @@ class angle_translator(Node):
     def angle_calculator(self):
         theta_1 = self.theta_vector[0]
         theta_2 = self.theta_vector[1]
-        theta_3 = self.theta_vector[2]
+        theta_3 = self.theta_vector[2] - theta_2
         theta_5 = self.theta_vector[3] + np.pi/2
 
         self.answer_vector[0] = theta_1

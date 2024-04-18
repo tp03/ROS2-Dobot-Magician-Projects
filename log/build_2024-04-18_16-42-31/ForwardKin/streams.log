@@ -1,0 +1,22 @@
+[2.243s] Invoking command in '/home/student/anro_ws/src/ForwardKin': PYTHONPATH=/home/student/anro_ws/src/build/ForwardKin/prefix_override:/home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ForwardKin build --build-base /home/student/anro_ws/src/build/ForwardKin/build install --record /home/student/anro_ws/src/build/ForwardKin/install.log --single-version-externally-managed
+[2.554s] running egg_info
+[2.555s] writing ../build/ForwardKin/ForwardKin.egg-info/PKG-INFO
+[2.555s] writing dependency_links to ../build/ForwardKin/ForwardKin.egg-info/dependency_links.txt
+[2.555s] writing entry points to ../build/ForwardKin/ForwardKin.egg-info/entry_points.txt
+[2.556s] writing requirements to ../build/ForwardKin/ForwardKin.egg-info/requires.txt
+[2.556s] writing top-level names to ../build/ForwardKin/ForwardKin.egg-info/top_level.txt
+[2.558s] reading manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+[2.559s] adding license file 'LICENSE'
+[2.560s] writing manifest file '../build/ForwardKin/ForwardKin.egg-info/SOURCES.txt'
+[2.560s] running build
+[2.560s] running build_py
+[2.561s] running install
+[2.562s] running install_lib
+[2.563s] running install_data
+[2.564s] running install_egg_info
+[2.567s] removing '/home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin-0.0.0-py3.10.egg-info' (and everything under it)
+[2.567s] Copying ../build/ForwardKin/ForwardKin.egg-info to /home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages/ForwardKin-0.0.0-py3.10.egg-info
+[2.568s] running install_scripts
+[2.596s] Installing ForwardKin script to /home/student/anro_ws/src/install/ForwardKin/lib/ForwardKin
+[2.596s] writing list of installed files to '/home/student/anro_ws/src/build/ForwardKin/install.log'
+[2.870s] Invoked command in '/home/student/anro_ws/src/ForwardKin' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/ForwardKin/prefix_override:/home/student/anro_ws/src/install/ForwardKin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ForwardKin build --build-base /home/student/anro_ws/src/build/ForwardKin/build install --record /home/student/anro_ws/src/build/ForwardKin/install.log --single-version-externally-managed

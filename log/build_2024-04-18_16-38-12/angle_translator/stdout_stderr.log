@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/angle_translator/angle_translator.egg-info
+writing ../build/angle_translator/angle_translator.egg-info/PKG-INFO
+writing dependency_links to ../build/angle_translator/angle_translator.egg-info/dependency_links.txt
+writing entry points to ../build/angle_translator/angle_translator.egg-info/entry_points.txt
+writing requirements to ../build/angle_translator/angle_translator.egg-info/requires.txt
+writing top-level names to ../build/angle_translator/angle_translator.egg-info/top_level.txt
+writing manifest file '../build/angle_translator/angle_translator.egg-info/SOURCES.txt'
+reading manifest file '../build/angle_translator/angle_translator.egg-info/SOURCES.txt'
+writing manifest file '../build/angle_translator/angle_translator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/student/anro_ws/src/build/angle_translator/build
+creating /home/student/anro_ws/src/build/angle_translator/build/lib
+creating /home/student/anro_ws/src/build/angle_translator/build/lib/angle_translator
+copying angle_translator/angle_translator.py -> /home/student/anro_ws/src/build/angle_translator/build/lib/angle_translator
+copying angle_translator/__init__.py -> /home/student/anro_ws/src/build/angle_translator/build/lib/angle_translator
+running install
+running install_lib
+creating /home/student/anro_ws/src/install/angle_translator/lib/python3.10/site-packages/angle_translator
+copying /home/student/anro_ws/src/build/angle_translator/build/lib/angle_translator/angle_translator.py -> /home/student/anro_ws/src/install/angle_translator/lib/python3.10/site-packages/angle_translator
+copying /home/student/anro_ws/src/build/angle_translator/build/lib/angle_translator/__init__.py -> /home/student/anro_ws/src/install/angle_translator/lib/python3.10/site-packages/angle_translator
+byte-compiling /home/student/anro_ws/src/install/angle_translator/lib/python3.10/site-packages/angle_translator/angle_translator.py to angle_translator.cpython-310.pyc
+byte-compiling /home/student/anro_ws/src/install/angle_translator/lib/python3.10/site-packages/angle_translator/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/student/anro_ws/src/install/angle_translator/share/ament_index
+creating /home/student/anro_ws/src/install/angle_translator/share/ament_index/resource_index
+creating /home/student/anro_ws/src/install/angle_translator/share/ament_index/resource_index/packages
+copying resource/angle_translator -> /home/student/anro_ws/src/install/angle_translator/share/ament_index/resource_index/packages
+copying package.xml -> /home/student/anro_ws/src/install/angle_translator/share/angle_translator
+running install_egg_info
+Copying ../build/angle_translator/angle_translator.egg-info to /home/student/anro_ws/src/install/angle_translator/lib/python3.10/site-packages/angle_translator-0.0.0-py3.10.egg-info
+running install_scripts
+Installing angle_translator script to /home/student/anro_ws/src/install/angle_translator/lib/angle_translator
+writing list of installed files to '/home/student/anro_ws/src/build/angle_translator/install.log'

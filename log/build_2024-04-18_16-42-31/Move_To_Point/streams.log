@@ -1,0 +1,24 @@
+[2.134s] Invoking command in '/home/student/anro_ws/src/Move_To_Point': PYTHONPATH=/home/student/anro_ws/src/build/Move_To_Point/prefix_override:/home/student/anro_ws/src/install/Move_To_Point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/Move_To_Point build --build-base /home/student/anro_ws/src/build/Move_To_Point/build install --record /home/student/anro_ws/src/build/Move_To_Point/install.log --single-version-externally-managed
+[2.429s] running egg_info
+[2.430s] writing ../build/Move_To_Point/Move_To_Point.egg-info/PKG-INFO
+[2.430s] writing dependency_links to ../build/Move_To_Point/Move_To_Point.egg-info/dependency_links.txt
+[2.431s] writing entry points to ../build/Move_To_Point/Move_To_Point.egg-info/entry_points.txt
+[2.432s] writing requirements to ../build/Move_To_Point/Move_To_Point.egg-info/requires.txt
+[2.432s] writing top-level names to ../build/Move_To_Point/Move_To_Point.egg-info/top_level.txt
+[2.436s] reading manifest file '../build/Move_To_Point/Move_To_Point.egg-info/SOURCES.txt'
+[2.437s] writing manifest file '../build/Move_To_Point/Move_To_Point.egg-info/SOURCES.txt'
+[2.438s] running build
+[2.438s] running build_py
+[2.439s] copying Move_To_Point/Move_To_Point.py -> /home/student/anro_ws/src/build/Move_To_Point/build/lib/Move_To_Point
+[2.439s] running install
+[2.440s] running install_lib
+[2.441s] copying /home/student/anro_ws/src/build/Move_To_Point/build/lib/Move_To_Point/Move_To_Point.py -> /home/student/anro_ws/src/install/Move_To_Point/lib/python3.10/site-packages/Move_To_Point
+[2.443s] byte-compiling /home/student/anro_ws/src/install/Move_To_Point/lib/python3.10/site-packages/Move_To_Point/Move_To_Point.py to Move_To_Point.cpython-310.pyc
+[2.446s] running install_data
+[2.447s] running install_egg_info
+[2.452s] removing '/home/student/anro_ws/src/install/Move_To_Point/lib/python3.10/site-packages/Move_To_Point-0.0.0-py3.10.egg-info' (and everything under it)
+[2.456s] Copying ../build/Move_To_Point/Move_To_Point.egg-info to /home/student/anro_ws/src/install/Move_To_Point/lib/python3.10/site-packages/Move_To_Point-0.0.0-py3.10.egg-info
+[2.464s] running install_scripts
+[2.497s] Installing Move_To_Point script to /home/student/anro_ws/src/install/Move_To_Point/lib/Move_To_Point
+[2.497s] writing list of installed files to '/home/student/anro_ws/src/build/Move_To_Point/install.log'
+[2.656s] Invoked command in '/home/student/anro_ws/src/Move_To_Point' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/Move_To_Point/prefix_override:/home/student/anro_ws/src/install/Move_To_Point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/Move_To_Point build --build-base /home/student/anro_ws/src/build/Move_To_Point/build install --record /home/student/anro_ws/src/build/Move_To_Point/install.log --single-version-externally-managed

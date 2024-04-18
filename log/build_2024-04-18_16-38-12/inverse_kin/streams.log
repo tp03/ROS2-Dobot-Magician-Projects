@@ -1,0 +1,37 @@
+[2.375s] Invoking command in '/home/student/anro_ws/src/inverse_kin': PYTHONPATH=/home/student/anro_ws/src/build/inverse_kin/prefix_override:/home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/inverse_kin build --build-base /home/student/anro_ws/src/build/inverse_kin/build install --record /home/student/anro_ws/src/build/inverse_kin/install.log --single-version-externally-managed
+[2.659s] running egg_info
+[2.660s] creating ../build/inverse_kin/inverse_kin.egg-info
+[2.660s] writing ../build/inverse_kin/inverse_kin.egg-info/PKG-INFO
+[2.660s] writing dependency_links to ../build/inverse_kin/inverse_kin.egg-info/dependency_links.txt
+[2.660s] writing entry points to ../build/inverse_kin/inverse_kin.egg-info/entry_points.txt
+[2.661s] writing requirements to ../build/inverse_kin/inverse_kin.egg-info/requires.txt
+[2.661s] writing top-level names to ../build/inverse_kin/inverse_kin.egg-info/top_level.txt
+[2.661s] writing manifest file '../build/inverse_kin/inverse_kin.egg-info/SOURCES.txt'
+[2.663s] reading manifest file '../build/inverse_kin/inverse_kin.egg-info/SOURCES.txt'
+[2.664s] writing manifest file '../build/inverse_kin/inverse_kin.egg-info/SOURCES.txt'
+[2.664s] running build
+[2.664s] running build_py
+[2.664s] creating /home/student/anro_ws/src/build/inverse_kin/build
+[2.664s] creating /home/student/anro_ws/src/build/inverse_kin/build/lib
+[2.664s] creating /home/student/anro_ws/src/build/inverse_kin/build/lib/inverse_kin
+[2.664s] copying inverse_kin/inverse_kin.py -> /home/student/anro_ws/src/build/inverse_kin/build/lib/inverse_kin
+[2.665s] copying inverse_kin/__init__.py -> /home/student/anro_ws/src/build/inverse_kin/build/lib/inverse_kin
+[2.665s] running install
+[2.665s] running install_lib
+[2.666s] creating /home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages/inverse_kin
+[2.666s] copying /home/student/anro_ws/src/build/inverse_kin/build/lib/inverse_kin/inverse_kin.py -> /home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages/inverse_kin
+[2.666s] copying /home/student/anro_ws/src/build/inverse_kin/build/lib/inverse_kin/__init__.py -> /home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages/inverse_kin
+[2.667s] byte-compiling /home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages/inverse_kin/inverse_kin.py to inverse_kin.cpython-310.pyc
+[2.668s] byte-compiling /home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages/inverse_kin/__init__.py to __init__.cpython-310.pyc
+[2.668s] running install_data
+[2.669s] creating /home/student/anro_ws/src/install/inverse_kin/share/ament_index
+[2.669s] creating /home/student/anro_ws/src/install/inverse_kin/share/ament_index/resource_index
+[2.669s] creating /home/student/anro_ws/src/install/inverse_kin/share/ament_index/resource_index/packages
+[2.669s] copying resource/inverse_kin -> /home/student/anro_ws/src/install/inverse_kin/share/ament_index/resource_index/packages
+[2.669s] copying package.xml -> /home/student/anro_ws/src/install/inverse_kin/share/inverse_kin
+[2.669s] running install_egg_info
+[2.672s] Copying ../build/inverse_kin/inverse_kin.egg-info to /home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages/inverse_kin-0.0.0-py3.10.egg-info
+[2.673s] running install_scripts
+[2.699s] Installing inverse_kin script to /home/student/anro_ws/src/install/inverse_kin/lib/inverse_kin
+[2.699s] writing list of installed files to '/home/student/anro_ws/src/build/inverse_kin/install.log'
+[2.851s] Invoked command in '/home/student/anro_ws/src/inverse_kin' returned '0': PYTHONPATH=/home/student/anro_ws/src/build/inverse_kin/prefix_override:/home/student/anro_ws/src/install/inverse_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/inverse_kin build --build-base /home/student/anro_ws/src/build/inverse_kin/build install --record /home/student/anro_ws/src/build/inverse_kin/install.log --single-version-externally-managed
