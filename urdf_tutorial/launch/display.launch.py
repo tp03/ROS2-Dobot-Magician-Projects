@@ -36,19 +36,19 @@ def generate_launch_description():
     ld.add_action(Node(
             package='angle_translator',
             executable='angle_translator',
-            name='my_node1',
+            name='angle_translator',
         ),)
     
     ld.add_action(Node(
             package='ForwardKin',
             executable='ForwardKin',
-            name='my_node',
+            name='forward_kinematics',
         ),)
     
     ld.add_action(Node(
             package='inverse_kin',
             executable='inverse_kin',
-            name='my_node2',
+            name='inverse_kinematics',
         ),)
 
 
