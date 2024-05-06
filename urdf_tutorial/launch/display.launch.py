@@ -33,29 +33,29 @@ def generate_launch_description():
             # 'jsp_gui': LaunchConfiguration('gui')}.items()
     ))
 
-    ld.add_action(Node(
-            package='angle_translator',
-            executable='angle_translator',
-            name='angle_node',
-        ),)
+    #ld.add_action(Node(
+    #        package='angle_translator',
+    #        executable='angle_translator',
+    #        name='angle_node',
+    #    ),)
     
     ld.add_action(Node(
-            package='ForwardKin',
-            executable='ForwardKin',
+            package='forward_kin',
+            executable='forward_kin',
             name='forward_node',
         ),)
     
-    # ld.add_action(Node(
-    #         package='inverse_kin',
-    #         executable='inverse_kin',
-    #         name='inverse_node',
-    #     ),)
-
     ld.add_action(Node(
-            package='Move_To_Point',
-            executable='Move_To_Point',
-            name='move_node',
-        ),)
+             package='inverse_kin',
+             executable='inverse_kin',
+             name='inverse_node',
+         ),)
+
+    #ld.add_action(Node(
+    #        package='Move_To_Point',
+    #        executable='Move_To_Point',
+    #        name='move_node',
+    #    ),)
 
 
     return ld

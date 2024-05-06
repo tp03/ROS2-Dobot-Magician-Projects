@@ -1,3 +1,0 @@
-[console_scripts]
-Move_To_Point = Move_To_Point.Move_To_Point:main
-

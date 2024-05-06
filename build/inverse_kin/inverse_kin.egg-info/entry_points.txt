@@ -1,3 +1,0 @@
-[console_scripts]
-inverse_kin = inverse_kin.inverse_kin:main
-

@@ -7,7 +7,7 @@ from numpy import cos, sin
 import sympy as sp
 from sympy import symbols
 
-class inverse_kin(Node):
+class InverseKin(Node):
     def __init__(self):
         super().__init__('inverse_kin')
         self.point_subscriber = self.create_subscription(PointStamped, 'clicked_point', self.callback, 10)
@@ -17,6 +17,9 @@ class inverse_kin(Node):
 
 
     def callback(self, msg):
+        self.calculate_angles(msg)
+
+    def calculate_angles(self, msg):
         self.get_logger().info("Otrzymano wiadomość na temat 'clicked_point'")
         if msg.point is not None:
             x = msg.point.x
@@ -84,7 +87,7 @@ class inverse_kin(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    client = inverse_kin()
+    client = InverseKin()
     rclpy.spin(client)
     client.destroy_node()
     rclpy.shutdown()
