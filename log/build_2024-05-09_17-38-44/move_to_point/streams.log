@@ -1,0 +1,37 @@
+[2.099s] Invoking command in '/home/student/anro_24l/move_to_point': PYTHONPATH=/home/student/anro_24l/build/move_to_point/prefix_override:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/move_to_point build --build-base /home/student/anro_24l/build/move_to_point/build install --record /home/student/anro_24l/build/move_to_point/install.log --single-version-externally-managed
+[2.405s] running egg_info
+[2.407s] creating ../build/move_to_point/move_to_point.egg-info
+[2.407s] writing ../build/move_to_point/move_to_point.egg-info/PKG-INFO
+[2.407s] writing dependency_links to ../build/move_to_point/move_to_point.egg-info/dependency_links.txt
+[2.408s] writing entry points to ../build/move_to_point/move_to_point.egg-info/entry_points.txt
+[2.408s] writing requirements to ../build/move_to_point/move_to_point.egg-info/requires.txt
+[2.408s] writing top-level names to ../build/move_to_point/move_to_point.egg-info/top_level.txt
+[2.409s] writing manifest file '../build/move_to_point/move_to_point.egg-info/SOURCES.txt'
+[2.411s] reading manifest file '../build/move_to_point/move_to_point.egg-info/SOURCES.txt'
+[2.412s] writing manifest file '../build/move_to_point/move_to_point.egg-info/SOURCES.txt'
+[2.412s] running build
+[2.412s] running build_py
+[2.413s] creating /home/student/anro_24l/build/move_to_point/build
+[2.413s] creating /home/student/anro_24l/build/move_to_point/build/lib
+[2.413s] creating /home/student/anro_24l/build/move_to_point/build/lib/move_to_point
+[2.413s] copying move_to_point/move_to_point.py -> /home/student/anro_24l/build/move_to_point/build/lib/move_to_point
+[2.414s] copying move_to_point/__init__.py -> /home/student/anro_24l/build/move_to_point/build/lib/move_to_point
+[2.414s] running install
+[2.414s] running install_lib
+[2.415s] creating /home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages/move_to_point
+[2.415s] copying /home/student/anro_24l/build/move_to_point/build/lib/move_to_point/move_to_point.py -> /home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages/move_to_point
+[2.416s] copying /home/student/anro_24l/build/move_to_point/build/lib/move_to_point/__init__.py -> /home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages/move_to_point
+[2.417s] byte-compiling /home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages/move_to_point/move_to_point.py to move_to_point.cpython-310.pyc
+[2.418s] byte-compiling /home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages/move_to_point/__init__.py to __init__.cpython-310.pyc
+[2.418s] running install_data
+[2.419s] creating /home/student/anro_24l/install/move_to_point/share/ament_index
+[2.419s] creating /home/student/anro_24l/install/move_to_point/share/ament_index/resource_index
+[2.419s] creating /home/student/anro_24l/install/move_to_point/share/ament_index/resource_index/packages
+[2.419s] copying resource/move_to_point -> /home/student/anro_24l/install/move_to_point/share/ament_index/resource_index/packages
+[2.419s] copying package.xml -> /home/student/anro_24l/install/move_to_point/share/move_to_point
+[2.419s] running install_egg_info
+[2.422s] Copying ../build/move_to_point/move_to_point.egg-info to /home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages/move_to_point-0.0.0-py3.10.egg-info
+[2.423s] running install_scripts
+[2.451s] Installing move_to_point script to /home/student/anro_24l/install/move_to_point/lib/move_to_point
+[2.452s] writing list of installed files to '/home/student/anro_24l/build/move_to_point/install.log'
+[2.688s] Invoked command in '/home/student/anro_24l/move_to_point' returned '0': PYTHONPATH=/home/student/anro_24l/build/move_to_point/prefix_override:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/move_to_point build --build-base /home/student/anro_24l/build/move_to_point/build install --record /home/student/anro_24l/build/move_to_point/install.log --single-version-externally-managed

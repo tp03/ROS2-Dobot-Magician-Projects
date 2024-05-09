@@ -1,0 +1,22 @@
+[2.393s] Invoking command in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher': PYTHONPATH=/home/student/anro_24l/build/joint_state_publisher/prefix_override:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/joint_state_publisher build --build-base /home/student/anro_24l/build/joint_state_publisher/build install --record /home/student/anro_24l/build/joint_state_publisher/install.log --single-version-externally-managed
+[2.684s] running egg_info
+[2.685s] writing ../../build/joint_state_publisher/joint_state_publisher.egg-info/PKG-INFO
+[2.686s] writing dependency_links to ../../build/joint_state_publisher/joint_state_publisher.egg-info/dependency_links.txt
+[2.686s] writing entry points to ../../build/joint_state_publisher/joint_state_publisher.egg-info/entry_points.txt
+[2.687s] writing requirements to ../../build/joint_state_publisher/joint_state_publisher.egg-info/requires.txt
+[2.687s] writing top-level names to ../../build/joint_state_publisher/joint_state_publisher.egg-info/top_level.txt
+[2.689s] reading manifest file '../../build/joint_state_publisher/joint_state_publisher.egg-info/SOURCES.txt'
+[2.690s] adding license file 'LICENSE'
+[2.690s] writing manifest file '../../build/joint_state_publisher/joint_state_publisher.egg-info/SOURCES.txt'
+[2.690s] running build
+[2.690s] running build_py
+[2.691s] running install
+[2.691s] running install_lib
+[2.691s] running install_data
+[2.691s] running install_egg_info
+[2.693s] removing '/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages/joint_state_publisher-2.4.0-py3.10.egg-info' (and everything under it)
+[2.693s] Copying ../../build/joint_state_publisher/joint_state_publisher.egg-info to /home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages/joint_state_publisher-2.4.0-py3.10.egg-info
+[2.694s] running install_scripts
+[2.718s] Installing joint_state_publisher script to /home/student/anro_24l/install/joint_state_publisher/lib/joint_state_publisher
+[2.719s] writing list of installed files to '/home/student/anro_24l/build/joint_state_publisher/install.log'
+[2.996s] Invoked command in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher' returned '0': PYTHONPATH=/home/student/anro_24l/build/joint_state_publisher/prefix_override:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/joint_state_publisher build --build-base /home/student/anro_24l/build/joint_state_publisher/build install --record /home/student/anro_24l/build/joint_state_publisher/install.log --single-version-externally-managed
