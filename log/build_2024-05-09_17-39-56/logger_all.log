@@ -1,0 +1,666 @@
+[1.124s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.124s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x768e49dc7c40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x768e49d7ab00>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x768e49d7ab00>>)
+[1.174s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.174s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.175s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/student/anro_24l'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.175s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extensions ['ignore', 'ignore_ament_install']
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extension 'ignore'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extension 'ignore_ament_install'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extensions ['colcon_pkg']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extension 'colcon_pkg'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extensions ['colcon_meta']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extension 'colcon_meta'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extensions ['ros']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(Move_To_Point) by extension 'ros'
+[1.190s] DEBUG:colcon.colcon_core.package_identification:Package 'Move_To_Point' with type 'ros.ament_python' and name 'Move_To_Point'
+[1.190s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extensions ['ignore', 'ignore_ament_install']
+[1.190s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extension 'ignore'
+[1.190s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extension 'ignore_ament_install'
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extensions ['colcon_pkg']
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extension 'colcon_pkg'
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extensions ['colcon_meta']
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extension 'colcon_meta'
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extensions ['ros']
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(angle_translator) by extension 'ros'
+[1.191s] DEBUG:colcon.colcon_core.package_identification:Package 'angle_translator' with type 'ros.ament_python' and name 'angle_translator'
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.191s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extensions ['ignore', 'ignore_ament_install']
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extension 'ignore'
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extension 'ignore_ament_install'
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extensions ['colcon_pkg']
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extension 'colcon_pkg'
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extensions ['colcon_meta']
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extension 'colcon_meta'
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extensions ['ros']
+[1.192s] Level 1:colcon.colcon_core.package_identification:_identify(forward_kin) by extension 'ros'
+[1.193s] DEBUG:colcon.colcon_core.package_identification:Package 'forward_kin' with type 'ros.ament_python' and name 'forward_kin'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extensions ['ignore', 'ignore_ament_install']
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extension 'ignore'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extension 'ignore_ament_install'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extensions ['colcon_pkg']
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extension 'colcon_pkg'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extensions ['colcon_meta']
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extension 'colcon_meta'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extensions ['ros']
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(inverse_kin) by extension 'ros'
+[1.194s] DEBUG:colcon.colcon_core.package_identification:Package 'inverse_kin' with type 'ros.ament_python' and name 'inverse_kin'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['ignore', 'ignore_ament_install']
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ignore'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ignore_ament_install'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['colcon_pkg']
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'colcon_pkg'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['colcon_meta']
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'colcon_meta'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['ros']
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'ros'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['cmake', 'python']
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'cmake'
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'python'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extensions ['python_setup_py']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher) by extension 'python_setup_py'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['ignore', 'ignore_ament_install']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'ignore'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'ignore_ament_install'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['colcon_pkg']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'colcon_pkg'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['colcon_meta']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'colcon_meta'
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extensions ['ros']
+[1.195s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher) by extension 'ros'
+[1.196s] DEBUG:colcon.colcon_core.package_identification:Package 'joint_state_publisher/joint_state_publisher' with type 'ros.ament_python' and name 'joint_state_publisher'
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['ignore', 'ignore_ament_install']
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'ignore'
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'ignore_ament_install'
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['colcon_pkg']
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'colcon_pkg'
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['colcon_meta']
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'colcon_meta'
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extensions ['ros']
+[1.196s] Level 1:colcon.colcon_core.package_identification:_identify(joint_state_publisher/joint_state_publisher_gui) by extension 'ros'
+[1.197s] DEBUG:colcon.colcon_core.package_identification:Package 'joint_state_publisher/joint_state_publisher_gui' with type 'ros.ament_python' and name 'joint_state_publisher_gui'
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['ignore', 'ignore_ament_install']
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ignore'
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ignore_ament_install'
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['colcon_pkg']
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'colcon_pkg'
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['colcon_meta']
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'colcon_meta'
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extensions ['ros']
+[1.197s] Level 1:colcon.colcon_core.package_identification:_identify(lab2) by extension 'ros'
+[1.198s] DEBUG:colcon.colcon_core.package_identification:Package 'lab2' with type 'ros.ament_python' and name 'lab2'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extensions ['ignore', 'ignore_ament_install']
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'ignore'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'ignore_ament_install'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extensions ['colcon_pkg']
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'colcon_pkg'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extensions ['colcon_meta']
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'colcon_meta'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extensions ['ros']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'ros'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extensions ['cmake', 'python']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'cmake'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'python'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extensions ['python_setup_py']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(meROS) by extension 'python_setup_py'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extensions ['ignore', 'ignore_ament_install']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extension 'ignore'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extension 'ignore_ament_install'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extensions ['colcon_pkg']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extension 'colcon_pkg'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extensions ['colcon_meta']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extension 'colcon_meta'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extensions ['ros']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(move_to_point) by extension 'ros'
+[1.200s] DEBUG:colcon.colcon_core.package_identification:Package 'move_to_point' with type 'ros.ament_python' and name 'move_to_point'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extensions ['ignore', 'ignore_ament_install']
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extension 'ignore'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extension 'ignore_ament_install'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extensions ['colcon_pkg']
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extension 'colcon_pkg'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extensions ['colcon_meta']
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extension 'colcon_meta'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extensions ['ros']
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(prd1) by extension 'ros'
+[1.201s] DEBUG:colcon.colcon_core.package_identification:Package 'prd1' with type 'ros.ament_python' and name 'prd1'
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['ignore', 'ignore_ament_install']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'ignore'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'ignore_ament_install'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['colcon_pkg']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'colcon_pkg'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['colcon_meta']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'colcon_meta'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extensions ['ros']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_launch) by extension 'ros'
+[1.203s] DEBUG:colcon.colcon_core.package_identification:Package 'urdf_launch' with type 'ros.ament_cmake' and name 'urdf_launch'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['ignore', 'ignore_ament_install']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ignore'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ignore_ament_install'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['colcon_pkg']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'colcon_pkg'
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['colcon_meta']
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'colcon_meta'
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extensions ['ros']
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(urdf_tutorial) by extension 'ros'
+[1.204s] DEBUG:colcon.colcon_core.package_identification:Package 'urdf_tutorial' with type 'ros.ament_cmake' and name 'urdf_tutorial'
+[1.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.342s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 12 installed packages in /home/student/anro_24l/install
+[1.358s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /opt/dobot_anro_system/install
+[1.375s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 280 installed packages in /opt/ros/humble
+[1.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'cmake_args' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'cmake_target' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'cmake_clean_cache' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'cmake_clean_first' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'cmake_force_configure' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'ament_cmake_args' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'catkin_cmake_args' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'Move_To_Point' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.492s] DEBUG:colcon.colcon_core.verb:Building package 'Move_To_Point' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/Move_To_Point', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/Move_To_Point', 'merge_install': False, 'path': '/home/student/anro_24l/Move_To_Point', 'symlink_install': False, 'test_result_base': None}
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'cmake_args' from command line to 'None'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'cmake_target' from command line to 'None'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'cmake_clean_cache' from command line to 'False'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'cmake_clean_first' from command line to 'False'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'cmake_force_configure' from command line to 'False'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'ament_cmake_args' from command line to 'None'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'catkin_cmake_args' from command line to 'None'
+[1.510s] Level 5:colcon.colcon_core.verb:set package 'angle_translator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.510s] DEBUG:colcon.colcon_core.verb:Building package 'angle_translator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/angle_translator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/angle_translator', 'merge_install': False, 'path': '/home/student/anro_24l/angle_translator', 'symlink_install': False, 'test_result_base': None}
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'cmake_args' from command line to 'None'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'cmake_target' from command line to 'None'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'cmake_clean_cache' from command line to 'False'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'cmake_clean_first' from command line to 'False'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'cmake_force_configure' from command line to 'False'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'ament_cmake_args' from command line to 'None'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'catkin_cmake_args' from command line to 'None'
+[1.527s] Level 5:colcon.colcon_core.verb:set package 'forward_kin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.527s] DEBUG:colcon.colcon_core.verb:Building package 'forward_kin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/forward_kin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/forward_kin', 'merge_install': False, 'path': '/home/student/anro_24l/forward_kin', 'symlink_install': False, 'test_result_base': None}
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'cmake_args' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'cmake_target' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'cmake_clean_cache' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'cmake_clean_first' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'cmake_force_configure' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'ament_cmake_args' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'catkin_cmake_args' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'inverse_kin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.544s] DEBUG:colcon.colcon_core.verb:Building package 'inverse_kin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/inverse_kin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/inverse_kin', 'merge_install': False, 'path': '/home/student/anro_24l/inverse_kin', 'symlink_install': False, 'test_result_base': None}
+[1.560s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_args' from command line to 'None'
+[1.560s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_target' from command line to 'None'
+[1.560s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.560s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[1.560s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[1.560s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[1.561s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[1.561s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[1.561s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.561s] DEBUG:colcon.colcon_core.verb:Building package 'joint_state_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/joint_state_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/joint_state_publisher', 'merge_install': False, 'path': '/home/student/anro_24l/joint_state_publisher/joint_state_publisher', 'symlink_install': False, 'test_result_base': None}
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_args' from command line to 'None'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_target' from command line to 'None'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_clean_cache' from command line to 'False'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_clean_first' from command line to 'False'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'cmake_force_configure' from command line to 'False'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'ament_cmake_args' from command line to 'None'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'catkin_cmake_args' from command line to 'None'
+[1.577s] Level 5:colcon.colcon_core.verb:set package 'lab2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.577s] DEBUG:colcon.colcon_core.verb:Building package 'lab2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/lab2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/lab2', 'merge_install': False, 'path': '/home/student/anro_24l/lab2', 'symlink_install': False, 'test_result_base': None}
+[1.593s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'cmake_args' from command line to 'None'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'cmake_target' from command line to 'None'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'cmake_clean_cache' from command line to 'False'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'cmake_clean_first' from command line to 'False'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'cmake_force_configure' from command line to 'False'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'ament_cmake_args' from command line to 'None'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'catkin_cmake_args' from command line to 'None'
+[1.594s] Level 5:colcon.colcon_core.verb:set package 'move_to_point' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.594s] DEBUG:colcon.colcon_core.verb:Building package 'move_to_point' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/move_to_point', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/move_to_point', 'merge_install': False, 'path': '/home/student/anro_24l/move_to_point', 'symlink_install': False, 'test_result_base': None}
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'cmake_args' from command line to 'None'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'cmake_target' from command line to 'None'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'cmake_clean_cache' from command line to 'False'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'cmake_clean_first' from command line to 'False'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'cmake_force_configure' from command line to 'False'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'ament_cmake_args' from command line to 'None'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'catkin_cmake_args' from command line to 'None'
+[1.610s] Level 5:colcon.colcon_core.verb:set package 'prd1' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.610s] DEBUG:colcon.colcon_core.verb:Building package 'prd1' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/prd1', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/prd1', 'merge_install': False, 'path': '/home/student/anro_24l/prd1', 'symlink_install': False, 'test_result_base': None}
+[1.626s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_args' from command line to 'None'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_target' from command line to 'None'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_clean_cache' from command line to 'False'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_clean_first' from command line to 'False'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'cmake_force_configure' from command line to 'False'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'ament_cmake_args' from command line to 'None'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'catkin_cmake_args' from command line to 'None'
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'joint_state_publisher_gui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.627s] DEBUG:colcon.colcon_core.verb:Building package 'joint_state_publisher_gui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/joint_state_publisher_gui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/joint_state_publisher_gui', 'merge_install': False, 'path': '/home/student/anro_24l/joint_state_publisher/joint_state_publisher_gui', 'symlink_install': False, 'test_result_base': None}
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_args' from command line to 'None'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_target' from command line to 'None'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_clean_first' from command line to 'False'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'cmake_force_configure' from command line to 'False'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'ament_cmake_args' from command line to 'None'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[1.643s] Level 5:colcon.colcon_core.verb:set package 'urdf_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.644s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/urdf_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/urdf_launch', 'merge_install': False, 'path': '/home/student/anro_24l/urdf_launch', 'symlink_install': False, 'test_result_base': None}
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_args' from command line to 'None'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_target' from command line to 'None'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_clean_cache' from command line to 'False'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_clean_first' from command line to 'False'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'cmake_force_configure' from command line to 'False'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'ament_cmake_args' from command line to 'None'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'catkin_cmake_args' from command line to 'None'
+[1.660s] Level 5:colcon.colcon_core.verb:set package 'urdf_tutorial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.660s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_tutorial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student/anro_24l/build/urdf_tutorial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student/anro_24l/install/urdf_tutorial', 'merge_install': False, 'path': '/home/student/anro_24l/urdf_tutorial', 'symlink_install': False, 'test_result_base': None}
+[1.676s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.693s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.694s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher' with build type 'ament_python'
+[1.694s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher', 'ament_prefix_path')
+[1.715s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.ps1'
+[1.716s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.dsv'
+[1.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/hook/ament_prefix_path.sh'
+[1.734s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.734s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.803s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/Move_To_Point' with build type 'ament_python'
+[1.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('Move_To_Point', 'ament_prefix_path')
+[1.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/hook/ament_prefix_path.ps1'
+[1.824s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/hook/ament_prefix_path.dsv'
+[1.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/hook/ament_prefix_path.sh'
+[1.841s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.841s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.911s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/angle_translator' with build type 'ament_python'
+[1.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('angle_translator', 'ament_prefix_path')
+[1.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/angle_translator/share/angle_translator/hook/ament_prefix_path.ps1'
+[1.928s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/angle_translator/share/angle_translator/hook/ament_prefix_path.dsv'
+[1.928s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/angle_translator/share/angle_translator/hook/ament_prefix_path.sh'
+[1.946s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.946s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.015s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/forward_kin' with build type 'ament_python'
+[2.016s] Level 1:colcon.colcon_core.shell:create_environment_hook('forward_kin', 'ament_prefix_path')
+[2.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/forward_kin/share/forward_kin/hook/ament_prefix_path.ps1'
+[2.036s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/forward_kin/share/forward_kin/hook/ament_prefix_path.dsv'
+[2.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/forward_kin/share/forward_kin/hook/ament_prefix_path.sh'
+[2.052s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.052s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.425s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher'
+[2.442s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.442s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.816s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/Move_To_Point'
+[2.834s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.834s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.206s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/angle_translator'
+[3.222s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.222s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.602s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/forward_kin'
+[3.618s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.618s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/Move_To_Point': PYTHONPATH=/home/student/anro_24l/build/Move_To_Point/prefix_override:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/Move_To_Point build --build-base /home/student/anro_24l/build/Move_To_Point/build install --record /home/student/anro_24l/build/Move_To_Point/install.log --single-version-externally-managed
+[4.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher': PYTHONPATH=/home/student/anro_24l/build/joint_state_publisher/prefix_override:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/joint_state_publisher build --build-base /home/student/anro_24l/build/joint_state_publisher/build install --record /home/student/anro_24l/build/joint_state_publisher/install.log --single-version-externally-managed
+[4.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/angle_translator': PYTHONPATH=/home/student/anro_24l/build/angle_translator/prefix_override:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/angle_translator build --build-base /home/student/anro_24l/build/angle_translator/build install --record /home/student/anro_24l/build/angle_translator/install.log --single-version-externally-managed
+[4.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/forward_kin': PYTHONPATH=/home/student/anro_24l/build/forward_kin/prefix_override:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/forward_kin build --build-base /home/student/anro_24l/build/forward_kin/build install --record /home/student/anro_24l/build/forward_kin/install.log --single-version-externally-managed
+[4.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher' returned '0': PYTHONPATH=/home/student/anro_24l/build/joint_state_publisher/prefix_override:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/joint_state_publisher build --build-base /home/student/anro_24l/build/joint_state_publisher/build install --record /home/student/anro_24l/build/joint_state_publisher/install.log --single-version-externally-managed
+[4.622s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher' for CMake module files
+[4.623s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher' for CMake config files
+[4.623s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher/lib'
+[4.624s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher/bin'
+[4.624s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher/lib/pkgconfig/joint_state_publisher.pc'
+[4.624s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages'
+[4.624s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher', 'pythonpath')
+[4.644s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.ps1'
+[4.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.dsv'
+[4.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/hook/pythonpath.sh'
+[4.645s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher/bin'
+[4.645s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joint_state_publisher)
+[4.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/package.ps1'
+[4.663s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/package.dsv'
+[4.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/package.sh'
+[4.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/package.bash'
+[4.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher/share/joint_state_publisher/package.zsh'
+[4.666s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/joint_state_publisher/share/colcon-core/packages/joint_state_publisher)
+[4.667s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher_gui' with build type 'ament_python'
+[4.667s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher_gui', 'ament_prefix_path')
+[4.687s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/ament_prefix_path.ps1'
+[4.688s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/ament_prefix_path.dsv'
+[4.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/ament_prefix_path.sh'
+[4.707s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.707s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.799s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/Move_To_Point' returned '0': PYTHONPATH=/home/student/anro_24l/build/Move_To_Point/prefix_override:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/Move_To_Point build --build-base /home/student/anro_24l/build/Move_To_Point/build install --record /home/student/anro_24l/build/Move_To_Point/install.log --single-version-externally-managed
+[4.816s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/Move_To_Point' for CMake module files
+[4.816s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/Move_To_Point' for CMake config files
+[4.817s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/Move_To_Point/lib'
+[4.817s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/Move_To_Point/bin'
+[4.817s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/Move_To_Point/lib/pkgconfig/Move_To_Point.pc'
+[4.817s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages'
+[4.817s] Level 1:colcon.colcon_core.shell:create_environment_hook('Move_To_Point', 'pythonpath')
+[4.834s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/hook/pythonpath.ps1'
+[4.834s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/hook/pythonpath.dsv'
+[4.835s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/hook/pythonpath.sh'
+[4.836s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/Move_To_Point/bin'
+[4.836s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(Move_To_Point)
+[4.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/package.ps1'
+[4.854s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/package.dsv'
+[4.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/package.sh'
+[4.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/package.bash'
+[4.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/Move_To_Point/share/Move_To_Point/package.zsh'
+[4.855s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/Move_To_Point/share/colcon-core/packages/Move_To_Point)
+[4.857s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/angle_translator' returned '0': PYTHONPATH=/home/student/anro_24l/build/angle_translator/prefix_override:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/angle_translator build --build-base /home/student/anro_24l/build/angle_translator/build install --record /home/student/anro_24l/build/angle_translator/install.log --single-version-externally-managed
+[4.873s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/angle_translator' for CMake module files
+[4.874s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/angle_translator' for CMake config files
+[4.874s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/angle_translator/lib'
+[4.874s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/angle_translator/bin'
+[4.875s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/angle_translator/lib/pkgconfig/angle_translator.pc'
+[4.875s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages'
+[4.875s] Level 1:colcon.colcon_core.shell:create_environment_hook('angle_translator', 'pythonpath')
+[4.892s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/angle_translator/share/angle_translator/hook/pythonpath.ps1'
+[4.892s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/angle_translator/share/angle_translator/hook/pythonpath.dsv'
+[4.893s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/angle_translator/share/angle_translator/hook/pythonpath.sh'
+[4.893s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/angle_translator/bin'
+[4.893s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(angle_translator)
+[4.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/angle_translator/share/angle_translator/package.ps1'
+[4.910s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/angle_translator/share/angle_translator/package.dsv'
+[4.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/angle_translator/share/angle_translator/package.sh'
+[4.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/angle_translator/share/angle_translator/package.bash'
+[4.912s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/angle_translator/share/angle_translator/package.zsh'
+[4.912s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/angle_translator/share/colcon-core/packages/angle_translator)
+[4.913s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/inverse_kin' with build type 'ament_python'
+[4.913s] Level 1:colcon.colcon_core.shell:create_environment_hook('inverse_kin', 'ament_prefix_path')
+[4.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/hook/ament_prefix_path.ps1'
+[4.932s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/hook/ament_prefix_path.dsv'
+[4.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/hook/ament_prefix_path.sh'
+[4.949s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.950s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.018s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/lab2' with build type 'ament_python'
+[5.018s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2', 'ament_prefix_path')
+[5.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/lab2/share/lab2/hook/ament_prefix_path.ps1'
+[5.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/lab2/share/lab2/hook/ament_prefix_path.dsv'
+[5.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/lab2/share/lab2/hook/ament_prefix_path.sh'
+[5.055s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.055s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/forward_kin' returned '0': PYTHONPATH=/home/student/anro_24l/build/forward_kin/prefix_override:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/forward_kin build --build-base /home/student/anro_24l/build/forward_kin/build install --record /home/student/anro_24l/build/forward_kin/install.log --single-version-externally-managed
+[5.143s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/forward_kin' for CMake module files
+[5.143s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/forward_kin' for CMake config files
+[5.144s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/forward_kin/lib'
+[5.144s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/forward_kin/bin'
+[5.144s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/forward_kin/lib/pkgconfig/forward_kin.pc'
+[5.144s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages'
+[5.144s] Level 1:colcon.colcon_core.shell:create_environment_hook('forward_kin', 'pythonpath')
+[5.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/forward_kin/share/forward_kin/hook/pythonpath.ps1'
+[5.161s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/forward_kin/share/forward_kin/hook/pythonpath.dsv'
+[5.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/forward_kin/share/forward_kin/hook/pythonpath.sh'
+[5.162s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/forward_kin/bin'
+[5.162s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(forward_kin)
+[5.178s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/forward_kin/share/forward_kin/package.ps1'
+[5.179s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/forward_kin/share/forward_kin/package.dsv'
+[5.179s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/forward_kin/share/forward_kin/package.sh'
+[5.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/forward_kin/share/forward_kin/package.bash'
+[5.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/forward_kin/share/forward_kin/package.zsh'
+[5.180s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/forward_kin/share/colcon-core/packages/forward_kin)
+[5.181s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/move_to_point' with build type 'ament_python'
+[5.181s] Level 1:colcon.colcon_core.shell:create_environment_hook('move_to_point', 'ament_prefix_path')
+[5.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/move_to_point/share/move_to_point/hook/ament_prefix_path.ps1'
+[5.200s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/move_to_point/share/move_to_point/hook/ament_prefix_path.dsv'
+[5.200s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/move_to_point/share/move_to_point/hook/ament_prefix_path.sh'
+[5.218s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.218s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.592s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher_gui'
+[5.608s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.608s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.978s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/inverse_kin'
+[5.995s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.995s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.369s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/lab2'
+[6.386s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.386s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.760s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/move_to_point'
+[6.777s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.777s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.316s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/move_to_point': PYTHONPATH=/home/student/anro_24l/build/move_to_point/prefix_override:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/move_to_point build --build-base /home/student/anro_24l/build/move_to_point/build install --record /home/student/anro_24l/build/move_to_point/install.log --single-version-externally-managed
+[7.335s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/lab2': PYTHONPATH=/home/student/anro_24l/build/lab2/prefix_override:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2 build --build-base /home/student/anro_24l/build/lab2/build install --record /home/student/anro_24l/build/lab2/install.log --single-version-externally-managed
+[7.398s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher_gui': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/build/joint_state_publisher_gui/prefix_override:/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/joint_state_publisher_gui build --build-base /home/student/anro_24l/build/joint_state_publisher_gui/build install --record /home/student/anro_24l/build/joint_state_publisher_gui/install.log --single-version-externally-managed
+[7.477s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/inverse_kin': PYTHONPATH=/home/student/anro_24l/build/inverse_kin/prefix_override:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/inverse_kin build --build-base /home/student/anro_24l/build/inverse_kin/build install --record /home/student/anro_24l/build/inverse_kin/install.log --single-version-externally-managed
+[7.694s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/move_to_point' returned '0': PYTHONPATH=/home/student/anro_24l/build/move_to_point/prefix_override:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/move_to_point build --build-base /home/student/anro_24l/build/move_to_point/build install --record /home/student/anro_24l/build/move_to_point/install.log --single-version-externally-managed
+[7.711s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/move_to_point' for CMake module files
+[7.712s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/move_to_point' for CMake config files
+[7.712s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/move_to_point/lib'
+[7.712s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/move_to_point/bin'
+[7.713s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/move_to_point/lib/pkgconfig/move_to_point.pc'
+[7.713s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages'
+[7.713s] Level 1:colcon.colcon_core.shell:create_environment_hook('move_to_point', 'pythonpath')
+[7.735s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/move_to_point/share/move_to_point/hook/pythonpath.ps1'
+[7.736s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/move_to_point/share/move_to_point/hook/pythonpath.dsv'
+[7.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/move_to_point/share/move_to_point/hook/pythonpath.sh'
+[7.737s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/move_to_point/bin'
+[7.737s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(move_to_point)
+[7.757s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/move_to_point/share/move_to_point/package.ps1'
+[7.757s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/move_to_point/share/move_to_point/package.dsv'
+[7.758s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/move_to_point/share/move_to_point/package.sh'
+[7.758s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/move_to_point/share/move_to_point/package.bash'
+[7.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/move_to_point/share/move_to_point/package.zsh'
+[7.761s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/move_to_point/share/colcon-core/packages/move_to_point)
+[7.762s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student/anro_24l/prd1' with build type 'ament_python'
+[7.762s] Level 1:colcon.colcon_core.shell:create_environment_hook('prd1', 'ament_prefix_path')
+[7.785s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/prd1/share/prd1/hook/ament_prefix_path.ps1'
+[7.793s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/prd1/share/prd1/hook/ament_prefix_path.dsv'
+[7.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/prd1/share/prd1/hook/ament_prefix_path.sh'
+[7.811s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.811s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.903s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/lab2' returned '0': PYTHONPATH=/home/student/anro_24l/build/lab2/prefix_override:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lab2 build --build-base /home/student/anro_24l/build/lab2/build install --record /home/student/anro_24l/build/lab2/install.log --single-version-externally-managed
+[7.919s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/lab2' for CMake module files
+[7.920s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/lab2' for CMake config files
+[7.921s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/lab2/lib'
+[7.921s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/lab2/bin'
+[7.921s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/lab2/lib/pkgconfig/lab2.pc'
+[7.921s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/lab2/lib/python3.10/site-packages'
+[7.921s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2', 'pythonpath')
+[7.939s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/lab2/share/lab2/hook/pythonpath.ps1'
+[7.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/lab2/share/lab2/hook/pythonpath.dsv'
+[7.940s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/lab2/share/lab2/hook/pythonpath.sh'
+[7.940s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/lab2/bin'
+[7.940s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab2)
+[7.957s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/lab2/share/lab2/package.ps1'
+[7.958s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/lab2/share/lab2/package.dsv'
+[7.958s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/lab2/share/lab2/package.sh'
+[7.959s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/lab2/share/lab2/package.bash'
+[7.959s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/lab2/share/lab2/package.zsh'
+[7.959s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/lab2/share/colcon-core/packages/lab2)
+[7.961s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/inverse_kin' returned '0': PYTHONPATH=/home/student/anro_24l/build/inverse_kin/prefix_override:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/inverse_kin build --build-base /home/student/anro_24l/build/inverse_kin/build install --record /home/student/anro_24l/build/inverse_kin/install.log --single-version-externally-managed
+[7.977s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/inverse_kin' for CMake module files
+[7.978s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/inverse_kin' for CMake config files
+[7.978s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/inverse_kin/lib'
+[7.978s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/inverse_kin/bin'
+[7.978s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/inverse_kin/lib/pkgconfig/inverse_kin.pc'
+[7.979s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages'
+[7.979s] Level 1:colcon.colcon_core.shell:create_environment_hook('inverse_kin', 'pythonpath')
+[7.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/hook/pythonpath.ps1'
+[7.997s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/hook/pythonpath.dsv'
+[7.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/hook/pythonpath.sh'
+[7.998s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/inverse_kin/bin'
+[7.998s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(inverse_kin)
+[8.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/package.ps1'
+[8.015s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/package.dsv'
+[8.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/package.sh'
+[8.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/package.bash'
+[8.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/inverse_kin/share/inverse_kin/package.zsh'
+[8.016s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/inverse_kin/share/colcon-core/packages/inverse_kin)
+[8.018s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/joint_state_publisher/joint_state_publisher_gui' returned '0': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/build/joint_state_publisher_gui/prefix_override:/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/joint_state_publisher_gui build --build-base /home/student/anro_24l/build/joint_state_publisher_gui/build install --record /home/student/anro_24l/build/joint_state_publisher_gui/install.log --single-version-externally-managed
+[8.035s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher_gui' for CMake module files
+[8.035s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher_gui' for CMake config files
+[8.036s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher_gui/lib'
+[8.036s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher_gui/bin'
+[8.036s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher_gui/lib/pkgconfig/joint_state_publisher_gui.pc'
+[8.036s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages'
+[8.037s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_state_publisher_gui', 'pythonpath')
+[8.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/pythonpath.ps1'
+[8.054s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/pythonpath.dsv'
+[8.054s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/hook/pythonpath.sh'
+[8.055s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/joint_state_publisher_gui/bin'
+[8.055s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joint_state_publisher_gui)
+[8.071s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.ps1'
+[8.072s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.dsv'
+[8.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.sh'
+[8.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.bash'
+[8.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/joint_state_publisher_gui/share/joint_state_publisher_gui/package.zsh'
+[8.073s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/joint_state_publisher_gui/share/colcon-core/packages/joint_state_publisher_gui)
+[8.074s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student/anro_24l/urdf_launch' with build type 'ament_cmake'
+[8.074s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student/anro_24l/urdf_launch'
+[8.091s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.092s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.467s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student/anro_24l/prd1'
+[8.484s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.484s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/build/urdf_launch': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/student/anro_24l/build/urdf_launch -- -j4 -l4
+[8.611s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/build/urdf_launch' returned '0': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/student/anro_24l/build/urdf_launch -- -j4 -l4
+[8.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/build/urdf_launch': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/student/anro_24l/build/urdf_launch
+[8.658s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_launch)
+[8.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/build/urdf_launch' returned '0': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/student/anro_24l/build/urdf_launch
+[8.676s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch' for CMake module files
+[8.676s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch' for CMake config files
+[8.677s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_launch', 'cmake_prefix_path')
+[8.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/hook/cmake_prefix_path.ps1'
+[8.694s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/hook/cmake_prefix_path.dsv'
+[8.695s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/hook/cmake_prefix_path.sh'
+[8.695s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/bin'
+[8.695s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/lib/pkgconfig/urdf_launch.pc'
+[8.696s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/lib/python3.10/site-packages'
+[8.696s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/bin'
+[8.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.ps1'
+[8.714s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.dsv'
+[8.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.sh'
+[8.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.bash'
+[8.715s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.zsh'
+[8.715s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/urdf_launch/share/colcon-core/packages/urdf_launch)
+[8.756s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_launch)
+[8.772s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch' for CMake module files
+[8.773s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch' for CMake config files
+[8.773s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_launch', 'cmake_prefix_path')
+[8.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/hook/cmake_prefix_path.ps1'
+[8.791s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/hook/cmake_prefix_path.dsv'
+[8.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/hook/cmake_prefix_path.sh'
+[8.792s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/bin'
+[8.792s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/lib/pkgconfig/urdf_launch.pc'
+[8.792s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/lib/python3.10/site-packages'
+[8.793s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_launch/bin'
+[8.809s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.ps1'
+[8.810s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.dsv'
+[8.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.sh'
+[8.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.bash'
+[8.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_launch/share/urdf_launch/package.zsh'
+[8.811s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/urdf_launch/share/colcon-core/packages/urdf_launch)
+[8.812s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student/anro_24l/urdf_tutorial' with build type 'ament_cmake'
+[8.812s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student/anro_24l/urdf_tutorial'
+[8.832s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.833s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.910s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/build/urdf_tutorial': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/urdf_tutorial:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/student/anro_24l/build/urdf_tutorial -- -j4 -l4
+[8.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/build/urdf_tutorial' returned '0': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/urdf_tutorial:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/student/anro_24l/build/urdf_tutorial -- -j4 -l4
+[8.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/build/urdf_tutorial': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/urdf_tutorial:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/student/anro_24l/build/urdf_tutorial
+[8.998s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_tutorial)
+[9.005s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/build/urdf_tutorial' returned '0': AMENT_PREFIX_PATH=/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/urdf_tutorial:/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble CMAKE_PREFIX_PATH=/home/student/anro_24l/install/urdf_launch:/home/student/anro_24l/install/urdf_tutorial:/opt/dobot_anro_system/install/dobot_msgs:/opt/dobot_anro_system/install/dobot_driver:/home/student/anro_24l/install/move_to_point:/home/student/anro_24l/install/prd1:/home/student/anro_24l/install/lab2:/home/student/anro_24l/install/joint_state_publisher_gui:/home/student/anro_24l/install/joint_state_publisher:/home/student/anro_24l/install/inverse_kin:/home/student/anro_24l/install/forward_kin:/home/student/anro_24l/install/angle_translator:/home/student/anro_24l/install/Move_To_Point:/home/student/anro_24l/install/ForwardKin:/opt/dobot_anro_system/install/dobot_state_updater:/opt/dobot_anro_system/install/dobot_motion:/opt/dobot_anro_system/install/dobot_homing:/opt/dobot_anro_system/install/dobot_end_effector:/opt/dobot_anro_system/install/dobot_diagnostics:/opt/dobot_anro_system/install/dobot_control_panel:/opt/dobot_anro_system/install/dobot_bringup:/opt/ros/humble PYTHONPATH=/home/student/anro_24l/install/joint_state_publisher_gui/lib/python3.10/site-packages:/home/student/anro_24l/install/joint_state_publisher/lib/python3.10/site-packages:/home/student/anro_24l/install/move_to_point/lib/python3.10/site-packages:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:/home/student/anro_24l/install/lab2/lib/python3.10/site-packages:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:/home/student/anro_24l/install/Move_To_Point/lib/python3.10/site-packages:/home/student/anro_24l/install/ForwardKin/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_state_updater/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_motion/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_homing/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_end_effector/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_diagnostics/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_msgs/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_driver/local/lib/python3.10/dist-packages:/opt/dobot_anro_system/install/dobot_control_panel/lib/python3.10/site-packages:/opt/dobot_anro_system/install/dobot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/student/anro_24l/build/urdf_tutorial
+[9.026s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial' for CMake module files
+[9.026s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial' for CMake config files
+[9.027s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_tutorial', 'cmake_prefix_path')
+[9.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.ps1'
+[9.044s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.dsv'
+[9.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.sh'
+[9.045s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/bin'
+[9.045s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/lib/pkgconfig/urdf_tutorial.pc'
+[9.046s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/lib/python3.10/site-packages'
+[9.046s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/bin'
+[9.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.ps1'
+[9.063s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.dsv'
+[9.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.sh'
+[9.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.bash'
+[9.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.zsh'
+[9.064s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/urdf_tutorial/share/colcon-core/packages/urdf_tutorial)
+[9.067s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student/anro_24l/prd1': PYTHONPATH=/home/student/anro_24l/build/prd1/prefix_override:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/prd1 build --build-base /home/student/anro_24l/build/prd1/build install --record /home/student/anro_24l/build/prd1/install.log --single-version-externally-managed
+[9.107s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_tutorial)
+[9.124s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial' for CMake module files
+[9.124s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial' for CMake config files
+[9.125s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_tutorial', 'cmake_prefix_path')
+[9.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.ps1'
+[9.143s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.dsv'
+[9.144s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/hook/cmake_prefix_path.sh'
+[9.144s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/bin'
+[9.144s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/lib/pkgconfig/urdf_tutorial.pc'
+[9.145s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/lib/python3.10/site-packages'
+[9.145s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/urdf_tutorial/bin'
+[9.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.ps1'
+[9.162s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.dsv'
+[9.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.sh'
+[9.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.bash'
+[9.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/urdf_tutorial/share/urdf_tutorial/package.zsh'
+[9.164s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/urdf_tutorial/share/colcon-core/packages/urdf_tutorial)
+[9.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student/anro_24l/prd1' returned '0': PYTHONPATH=/home/student/anro_24l/build/prd1/prefix_override:/home/student/anro_24l/install/prd1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/prd1 build --build-base /home/student/anro_24l/build/prd1/build install --record /home/student/anro_24l/build/prd1/install.log --single-version-externally-managed
+[9.434s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/prd1' for CMake module files
+[9.435s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/prd1' for CMake config files
+[9.435s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/prd1/lib'
+[9.436s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/prd1/bin'
+[9.436s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/prd1/lib/pkgconfig/prd1.pc'
+[9.436s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/prd1/lib/python3.10/site-packages'
+[9.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('prd1', 'pythonpath')
+[9.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/prd1/share/prd1/hook/pythonpath.ps1'
+[9.454s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student/anro_24l/install/prd1/share/prd1/hook/pythonpath.dsv'
+[9.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student/anro_24l/install/prd1/share/prd1/hook/pythonpath.sh'
+[9.455s] Level 1:colcon.colcon_core.environment:checking '/home/student/anro_24l/install/prd1/bin'
+[9.455s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(prd1)
+[9.471s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/prd1/share/prd1/package.ps1'
+[9.472s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student/anro_24l/install/prd1/share/prd1/package.dsv'
+[9.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/prd1/share/prd1/package.sh'
+[9.473s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/prd1/share/prd1/package.bash'
+[9.473s] INFO:colcon.colcon_core.shell:Creating package script '/home/student/anro_24l/install/prd1/share/prd1/package.zsh'
+[9.473s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student/anro_24l/install/prd1/share/colcon-core/packages/prd1)
+[9.474s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.474s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.474s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.474s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.498s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.498s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.498s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.508s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.525s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_24l/install/local_setup.ps1'
+[9.526s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student/anro_24l/install/_local_setup_util_ps1.py'
+[9.528s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_24l/install/setup.ps1'
+[9.547s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_24l/install/local_setup.sh'
+[9.548s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student/anro_24l/install/_local_setup_util_sh.py'
+[9.548s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_24l/install/setup.sh'
+[9.566s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_24l/install/local_setup.bash'
+[9.567s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_24l/install/setup.bash'
+[9.585s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student/anro_24l/install/local_setup.zsh'
+[9.586s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student/anro_24l/install/setup.zsh'

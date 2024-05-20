@@ -3,7 +3,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import JointState
 import numpy as np
 
-class angle_translator(Node):
+class AngleTranslator(Node):
     def __init__(self):
         super().__init__('angle_translator')
         self.dobot_subscription = self.create_subscription(JointState, 'dobot_joint_states', self.listener_callback, 10)
@@ -24,7 +24,7 @@ class angle_translator(Node):
     def angle_calculator(self):
         theta_1 = self.theta_vector[0]
         theta_2 = self.theta_vector[1]
-        theta_3 = self.theta_vector[2]
+        theta_3 = self.theta_vector[2] - theta_2
         theta_5 = self.theta_vector[3] + np.pi/2
 
         self.answer_vector[0] = theta_1
@@ -47,7 +47,7 @@ class angle_translator(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    client = angle_translator()
+    client = AngleTranslator()
     rclpy.spin(client)
     client.destroy_node()
     rclpy.shutdown()

@@ -1,0 +1,21 @@
+[2.563s] Invoking command in '/home/student/anro_24l/inverse_kin': PYTHONPATH=/home/student/anro_24l/build/inverse_kin/prefix_override:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/inverse_kin build --build-base /home/student/anro_24l/build/inverse_kin/build install --record /home/student/anro_24l/build/inverse_kin/install.log --single-version-externally-managed
+[2.906s] running egg_info
+[2.906s] writing ../build/inverse_kin/inverse_kin.egg-info/PKG-INFO
+[2.907s] writing dependency_links to ../build/inverse_kin/inverse_kin.egg-info/dependency_links.txt
+[2.907s] writing entry points to ../build/inverse_kin/inverse_kin.egg-info/entry_points.txt
+[2.907s] writing requirements to ../build/inverse_kin/inverse_kin.egg-info/requires.txt
+[2.907s] writing top-level names to ../build/inverse_kin/inverse_kin.egg-info/top_level.txt
+[2.911s] reading manifest file '../build/inverse_kin/inverse_kin.egg-info/SOURCES.txt'
+[2.913s] writing manifest file '../build/inverse_kin/inverse_kin.egg-info/SOURCES.txt'
+[2.913s] running build
+[2.913s] running build_py
+[2.913s] running install
+[2.913s] running install_lib
+[2.913s] running install_data
+[2.913s] running install_egg_info
+[2.928s] removing '/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages/inverse_kin-0.0.0-py3.10.egg-info' (and everything under it)
+[2.928s] Copying ../build/inverse_kin/inverse_kin.egg-info to /home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages/inverse_kin-0.0.0-py3.10.egg-info
+[2.928s] running install_scripts
+[2.946s] Installing inverse_kin script to /home/student/anro_24l/install/inverse_kin/lib/inverse_kin
+[2.947s] writing list of installed files to '/home/student/anro_24l/build/inverse_kin/install.log'
+[3.047s] Invoked command in '/home/student/anro_24l/inverse_kin' returned '0': PYTHONPATH=/home/student/anro_24l/build/inverse_kin/prefix_override:/home/student/anro_24l/install/inverse_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/inverse_kin build --build-base /home/student/anro_24l/build/inverse_kin/build install --record /home/student/anro_24l/build/inverse_kin/install.log --single-version-externally-managed

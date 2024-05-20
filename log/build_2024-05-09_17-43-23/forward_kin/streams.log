@@ -1,0 +1,21 @@
+[2.212s] Invoking command in '/home/student/anro_24l/forward_kin': PYTHONPATH=/home/student/anro_24l/build/forward_kin/prefix_override:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/forward_kin build --build-base /home/student/anro_24l/build/forward_kin/build install --record /home/student/anro_24l/build/forward_kin/install.log --single-version-externally-managed
+[2.533s] running egg_info
+[2.539s] writing ../build/forward_kin/forward_kin.egg-info/PKG-INFO
+[2.539s] writing dependency_links to ../build/forward_kin/forward_kin.egg-info/dependency_links.txt
+[2.539s] writing entry points to ../build/forward_kin/forward_kin.egg-info/entry_points.txt
+[2.542s] writing requirements to ../build/forward_kin/forward_kin.egg-info/requires.txt
+[2.543s] writing top-level names to ../build/forward_kin/forward_kin.egg-info/top_level.txt
+[2.546s] reading manifest file '../build/forward_kin/forward_kin.egg-info/SOURCES.txt'
+[2.547s] writing manifest file '../build/forward_kin/forward_kin.egg-info/SOURCES.txt'
+[2.548s] running build
+[2.548s] running build_py
+[2.549s] running install
+[2.550s] running install_lib
+[2.551s] running install_data
+[2.553s] running install_egg_info
+[2.556s] removing '/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages/forward_kin-0.0.0-py3.10.egg-info' (and everything under it)
+[2.558s] Copying ../build/forward_kin/forward_kin.egg-info to /home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages/forward_kin-0.0.0-py3.10.egg-info
+[2.559s] running install_scripts
+[2.586s] Installing forward_kin script to /home/student/anro_24l/install/forward_kin/lib/forward_kin
+[2.587s] writing list of installed files to '/home/student/anro_24l/build/forward_kin/install.log'
+[2.942s] Invoked command in '/home/student/anro_24l/forward_kin' returned '0': PYTHONPATH=/home/student/anro_24l/build/forward_kin/prefix_override:/home/student/anro_24l/install/forward_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/forward_kin build --build-base /home/student/anro_24l/build/forward_kin/build install --record /home/student/anro_24l/build/forward_kin/install.log --single-version-externally-managed

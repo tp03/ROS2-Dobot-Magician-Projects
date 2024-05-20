@@ -1,0 +1,3 @@
+[console_scripts]
+angle_translator = angle_translator.angle_translator:main
+

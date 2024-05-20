@@ -1,0 +1,21 @@
+[2.320s] Invoking command in '/home/student/anro_24l/angle_translator': PYTHONPATH=/home/student/anro_24l/build/angle_translator/prefix_override:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/angle_translator build --build-base /home/student/anro_24l/build/angle_translator/build install --record /home/student/anro_24l/build/angle_translator/install.log --single-version-externally-managed
+[2.652s] running egg_info
+[2.653s] writing ../build/angle_translator/angle_translator.egg-info/PKG-INFO
+[2.653s] writing dependency_links to ../build/angle_translator/angle_translator.egg-info/dependency_links.txt
+[2.653s] writing entry points to ../build/angle_translator/angle_translator.egg-info/entry_points.txt
+[2.653s] writing requirements to ../build/angle_translator/angle_translator.egg-info/requires.txt
+[2.653s] writing top-level names to ../build/angle_translator/angle_translator.egg-info/top_level.txt
+[2.655s] reading manifest file '../build/angle_translator/angle_translator.egg-info/SOURCES.txt'
+[2.656s] writing manifest file '../build/angle_translator/angle_translator.egg-info/SOURCES.txt'
+[2.656s] running build
+[2.656s] running build_py
+[2.657s] running install
+[2.657s] running install_lib
+[2.659s] running install_data
+[2.659s] running install_egg_info
+[2.662s] removing '/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages/angle_translator-0.0.0-py3.10.egg-info' (and everything under it)
+[2.662s] Copying ../build/angle_translator/angle_translator.egg-info to /home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages/angle_translator-0.0.0-py3.10.egg-info
+[2.663s] running install_scripts
+[2.688s] Installing angle_translator script to /home/student/anro_24l/install/angle_translator/lib/angle_translator
+[2.688s] writing list of installed files to '/home/student/anro_24l/build/angle_translator/install.log'
+[3.057s] Invoked command in '/home/student/anro_24l/angle_translator' returned '0': PYTHONPATH=/home/student/anro_24l/build/angle_translator/prefix_override:/home/student/anro_24l/install/angle_translator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/angle_translator build --build-base /home/student/anro_24l/build/angle_translator/build install --record /home/student/anro_24l/build/angle_translator/install.log --single-version-externally-managed
