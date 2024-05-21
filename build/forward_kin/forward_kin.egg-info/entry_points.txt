@@ -1,3 +1,0 @@
-[console_scripts]
-forward_kin = forward_kin.forward_kin:main
-

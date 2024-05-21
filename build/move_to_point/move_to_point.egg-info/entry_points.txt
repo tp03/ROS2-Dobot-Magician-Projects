@@ -1,3 +1,0 @@
-[console_scripts]
-move_to_point = move_to_point.move_to_point:main
-

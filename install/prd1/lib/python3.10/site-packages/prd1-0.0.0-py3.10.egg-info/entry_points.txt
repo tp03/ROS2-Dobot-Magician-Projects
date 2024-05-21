@@ -1,3 +1,0 @@
-[console_scripts]
-skz = prd1.turtle_tango:main
-

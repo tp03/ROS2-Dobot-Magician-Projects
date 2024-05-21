@@ -10,7 +10,7 @@ from sympy import symbols
 class InverseKin(Node):
     def __init__(self):
         super().__init__('inverse_kin')
-        self.point_subscriber = self.create_subscription(PointStamped, 'clicked_point', self.callback, 10)
+        self.point_subscriber = self.create_subscription(PointStamped, 'dobot_pose', self.callback, 10)
         self.angle_publisher = self.create_publisher(JointState, 'joint_states', 10)
 
         self.angle_vector = [1, 1, 1, 1, 1]
@@ -20,12 +20,12 @@ class InverseKin(Node):
         self.calculate_angles(msg)
 
     def calculate_angles(self, msg):
-        self.get_logger().info("Otrzymano wiadomość na temat 'clicked_point'")
+        # self.get_logger().info("Otrzymano wiadomość na temat 'clicked_point'")
         if msg.point is not None:
             x = msg.point.x
             y = msg.point.y
             z = msg.point.z
-            self.get_logger().info(f"Otrzymano kliknięty punkt: x={x}, y={y}, z={z}")
+            # self.get_logger().info(f"Otrzymano kliknięty punkt: x={x}, y={y}, z={z}")
         else:
             self.get_logger().info("Otrzymano wiadomość z pustym punktem")
 
@@ -62,11 +62,11 @@ class InverseKin(Node):
         theta4 = -(theta2 + theta3)
         theta5 = 0.0
 
-        self.get_logger().info(f"angle 1: {theta1}")
-        self.get_logger().info(f"angle 2: {theta2}")
-        self.get_logger().info(f"angle 3: {theta3}")
-        self.get_logger().info(f"angle 4: {theta4}")
-        self.get_logger().info(f"angle 5: {theta5}")
+        # self.get_logger().info(f"angle 1: {theta1}")
+        # self.get_logger().info(f"angle 2: {theta2}")
+        # self.get_logger().info(f"angle 3: {theta3}")
+        # self.get_logger().info(f"angle 4: {theta4}")
+        # self.get_logger().info(f"angle 5: {theta5}")
 
         if theta1 < -1.548 or theta1 > 1.548 or theta2 < 0 or theta2 > 1.484 or theta3 < -0.175 or theta3 > 1.571:
             for i in range (5):
