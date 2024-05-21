@@ -7,6 +7,7 @@ from sensor_msgs.msg import JointState
 from std_msgs.msg import Bool
 import numpy as np
 from numpy import sin, cos
+from time import sleep
 
 #from robot_msgs.action import VisPointToPoint
 camera_effector_difference_x = 0.1
@@ -28,12 +29,24 @@ class RobotPilot(Node):
         self.pose_publisher = self.create_publisher(PointStamped, 'dobot_pose', 10)
         self.flag_publisher = self.create_publisher(Bool, 'important_flag', 10)
         self.second_pose_publisher = self.create_publisher(Bool, 'second_pose', 10)
+        self.finish_publisher = self.create_publisher(Bool, 'finished', 10)
         self.m_publisher = self.create_publisher(Marker, 'vizualization_marker', 10)
+        self.published_publisher = self.create_publisher(Bool, 'published', 10)
+        self.published_subscriber = self.create_subscription(Bool, 'finished', self.p_callback, 10)
         self.timer = self.create_timer(1 / fr, self.timer_callback)
 
         self.point_1 = None
         self.point_3 = None
         self.publish_marker = False
+        self.published = False
+
+    def p_callback(self, msg: Bool):
+        if msg.data:
+            self.published = True
+        new_msg = Bool()
+        new_msg.data = False
+        self.published_publisher.publish(new_msg)
+        
 
     def joint_states_callback(self ,msg: JointState):
         theta_vector = msg.position
@@ -116,6 +129,7 @@ class RobotPilot(Node):
                 self.point_3 = [x_, y_, z_+0.1]
                 self.point_4 = [x_, y_, z_+0.03]
 
+
     def entry_dobot_pose(self):
         self.current_pose = PointStamped()
         self.current_pose.header.frame_id = "base_link"
@@ -155,35 +169,46 @@ class RobotPilot(Node):
             self.m_publisher.publish(marker1)
 
     def operation(self):
+        self.published = False
         while (
             self.point_1 is None or self.point_3 is None
         ) and rclpy.ok():
             rclpy.spin_once(self, timeout_sec= 1 / fr)
 
-        # 1) Move above the box
+        # 1) General move to the middle
+        self.move_to_point([0.2, 0, 0.15, 1], False)
+
+        # 2) Move above the box
         self.move_to_point(self.point_3, False)
 
-        # 2) Move down to the box
+        # 3) Move down to the box
         self.move_to_point(self.point_4, False)
 
-        # 3) Move up
+        # 4) Move up
         self.move_to_point(self.point_3, True)
 
-        # 4) Move above the paper
+        # 5) Move above the paper
         self.move_to_point(self.point_1, True)
 
-        # 5) Move down to the paper
+        # 6) Move down to the paper
         self.move_to_point(self.point_2, True)
         msg = Bool()
         msg.data = True
         self.second_pose_publisher.publish(msg)
 
-        # 6) Move up
+        # 7) Move up
         self.move_to_point(self.point_1, False)
 
-        # 7) Return
+        # 8) Return
         return_pose = [entry_x, entry_y, entry_z]
         self.move_to_point(return_pose, False)
+        msg = Bool()
+        msg.data = True
+        self.finish_publisher.publish(msg)
+        self.published = False
+        while not self.published and rclpy.ok():
+            rclpy.spin_once(self, timeout_sec= 1 / fr)
+
 
     def move_to_point(self, point, move_marker):
         if move_marker:
@@ -219,7 +244,9 @@ class RobotPilot(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = RobotPilot()
-    node.operation()
+    for i in range(10):
+        sleep(3)
+        node.operation()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

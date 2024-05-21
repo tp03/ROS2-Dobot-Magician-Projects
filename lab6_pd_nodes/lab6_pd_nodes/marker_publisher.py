@@ -16,11 +16,15 @@ class MarkerPublisher(Node):
         self.joint_subscriber = self.create_subscription(JointState, 'joint_states', self.joint_states_callback, 10)
         self.m_subscriber = self.create_subscription(PoseArray, 'camera_link', self.pose_callback, 10)
         self.second_pose_subscriber = self.create_subscription(Bool, 'second_pose', self. sp_callback, 10)
+        self.finish_subscriber = self.create_subscription(Bool, 'finished', self.finish_callback, 10)
         self.flag_subscriber = self.create_subscription(Bool , 'important_flag', self.flag_callback, 10)
         self.m_publisher = self.create_publisher(Marker, 'vizualization_marker', 10)
+        self.finish_publisher = self.create_publisher(Bool, 'finished', 10)
+        self.published_publisher = self.create_publisher(Bool, 'published', 10)
         self.camera_position = []
         self.publish = True
         self.second_pose = False
+        self.run_back = False
 
     def flag_callback(self, msg: Bool):
         if msg.data:
@@ -31,7 +35,11 @@ class MarkerPublisher(Node):
     def sp_callback(self, msg: Bool):
         if msg.data:
             self.second_pose = True
-
+    
+    def finish_callback(self, msg: Bool):
+        if msg.data:
+            self.second_pose = False
+            self.publish_marker()
 
     def joint_states_callback(self ,msg: JointState):
         theta_vector = msg.position
@@ -110,6 +118,9 @@ class MarkerPublisher(Node):
         self.publish_marker()
 
     def publish_marker(self):
+        # new_msg = Bool()
+        # new_msg.data = False
+        # self.finish_publisher.publish(new_msg)
         marker1 = Marker()
         marker2 = Marker()
         marker1.header.frame_id = "base_link"
@@ -170,6 +181,9 @@ class MarkerPublisher(Node):
         marker2.color.a = 1.0
 
         self.m_publisher.publish(marker2)
+        msg = Bool()
+        msg.data = True
+        self.published_publisher.publish(msg)
 
 def main(args=None):
     rclpy.init(args=args)
