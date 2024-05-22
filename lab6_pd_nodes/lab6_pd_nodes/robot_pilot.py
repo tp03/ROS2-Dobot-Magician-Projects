@@ -31,22 +31,11 @@ class RobotPilot(Node):
         self.second_pose_publisher = self.create_publisher(Bool, 'second_pose', 10)
         self.finish_publisher = self.create_publisher(Bool, 'finished', 10)
         self.m_publisher = self.create_publisher(Marker, 'vizualization_marker', 10)
-        self.published_publisher = self.create_publisher(Bool, 'published', 10)
-        self.published_subscriber = self.create_subscription(Bool, 'finished', self.p_callback, 10)
         self.timer = self.create_timer(1 / fr, self.timer_callback)
 
         self.point_1 = None
         self.point_3 = None
         self.publish_marker = False
-        self.published = False
-
-    def p_callback(self, msg: Bool):
-        if msg.data:
-            self.published = True
-        new_msg = Bool()
-        new_msg.data = False
-        self.published_publisher.publish(new_msg)
-        
 
     def joint_states_callback(self ,msg: JointState):
         theta_vector = msg.position
@@ -205,10 +194,6 @@ class RobotPilot(Node):
         msg = Bool()
         msg.data = True
         self.finish_publisher.publish(msg)
-        self.published = False
-        while not self.published and rclpy.ok():
-            rclpy.spin_once(self, timeout_sec= 1 / fr)
-
 
     def move_to_point(self, point, move_marker):
         if move_marker:

@@ -20,7 +20,6 @@ class MarkerPublisher(Node):
         self.flag_subscriber = self.create_subscription(Bool , 'important_flag', self.flag_callback, 10)
         self.m_publisher = self.create_publisher(Marker, 'vizualization_marker', 10)
         self.finish_publisher = self.create_publisher(Bool, 'finished', 10)
-        self.published_publisher = self.create_publisher(Bool, 'published', 10)
         self.camera_position = []
         self.publish = True
         self.second_pose = False
@@ -181,9 +180,6 @@ class MarkerPublisher(Node):
         marker2.color.a = 1.0
 
         self.m_publisher.publish(marker2)
-        msg = Bool()
-        msg.data = True
-        self.published_publisher.publish(msg)
 
 def main(args=None):
     rclpy.init(args=args)
