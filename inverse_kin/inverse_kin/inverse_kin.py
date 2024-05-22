@@ -83,10 +83,8 @@ class InverseKin(Node):
         self.angle_vector[1] = theta2
         self.angle_vector[2] = theta3
         self.angle_vector[3] = theta4
-        if self.rotation_angle != 0.0:
-            self.angle_vector[4] = self.rotation_angle - theta1 + np.pi/2
-        else:
-            self.angle_vector[4] = self.rotation_angle + np.pi/2
+        self.angle_vector[4] = self.rotation_angle - theta1 + np.pi/2
+
             
         joint_states = JointState()
         joint_states.header.stamp = self.get_clock().now().to_msg()
