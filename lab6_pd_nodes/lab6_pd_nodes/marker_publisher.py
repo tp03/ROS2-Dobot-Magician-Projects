@@ -107,12 +107,19 @@ class MarkerPublisher(Node):
             y = msg.poses[i].position.y
             z = msg.poses[i].position.z
 
+            rx = msg.poses[i].orientation.x
+            ry = msg.poses[i].orientation.y
+            rz = msg.poses[i].orientation.z
+            rw = msg.poses[i].orientation.w
+
             in_d = np.array([x, y, z, 1])
 
             if i == 0:
                 self.cube_pos = np.matmul(self.tac, in_d.T)
+                self.cube_rot = [rx, ry, rz, rw]
             else:
                 self.paper_pos = np.matmul(self.tac, in_d.T)
+                self.paper_rot = [rx, ry, rz, rw]
 
         self.publish_marker()
 
@@ -132,16 +139,20 @@ class MarkerPublisher(Node):
         if self.second_pose:
             marker1.pose.position.x = self.paper_pos.item(0,0)
             marker1.pose.position.y = self.paper_pos.item(0,1)
-            marker1.pose.position.z = self.cube_pos.item(0,2)   
+            marker1.pose.position.z = self.cube_pos.item(0,2)
+            marker1.pose.orientation.x = self.paper_rot[0]
+            marker1.pose.orientation.y = self.paper_rot[1]
+            marker1.pose.orientation.z = self.paper_rot[2]
+            marker1.pose.orientation.w = self.paper_rot[3]  
         else:
             marker1.pose.position.x = self.cube_pos.item(0,0)
             marker1.pose.position.y = self.cube_pos.item(0,1)
             marker1.pose.position.z = self.cube_pos.item(0,2)
+            marker1.pose.orientation.x = self.cube_rot[0]
+            marker1.pose.orientation.y = self.cube_rot[1]
+            marker1.pose.orientation.z = self.cube_rot[2]
+            marker1.pose.orientation.w = self.cube_rot[3]
 
-        marker1.pose.orientation.x = 0.0
-        marker1.pose.orientation.y = 0.0
-        marker1.pose.orientation.z = 0.0
-        marker1.pose.orientation.w = 1.0
         
         marker1.scale.x = 0.02
         marker1.scale.y = 0.02
@@ -165,10 +176,10 @@ class MarkerPublisher(Node):
         marker2.pose.position.x = self.paper_pos.item(0,0)
         marker2.pose.position.y = self.paper_pos.item(0,1)
         marker2.pose.position.z = self.paper_pos.item(0,2)
-        marker2.pose.orientation.x = 0.0
-        marker2.pose.orientation.y = 0.0
-        marker2.pose.orientation.z = 0.0
-        marker2.pose.orientation.w = 1.0
+        marker2.pose.orientation.x = self.paper_rot[0]
+        marker2.pose.orientation.y = self.paper_rot[1]
+        marker2.pose.orientation.z = self.paper_rot[2]
+        marker2.pose.orientation.w = self.paper_rot[3]
         
         marker2.scale.x = 0.05
         marker2.scale.y = 0.1

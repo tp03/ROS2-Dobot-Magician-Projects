@@ -5,6 +5,7 @@ from sensor_msgs.msg import JointState
 import numpy as np
 from geometry_msgs.msg import Pose
 from std_msgs.msg import Bool
+from transforms3d.euler import euler2quat
 
 from numpy import sin, cos
 import random
@@ -18,10 +19,12 @@ class MarkerSender(Node):
         self.cx = 0
         self.cy = 0
         self.cz = 0.011
+        self.cangle = 0
 
         self.px = 0
         self.py = 0
         self.pz = 0.0005
+        self.pangle = 0
 
         self.generate_markers_position()
         self.finish_subscriber = self.create_subscription(Bool, 'finished', self.finished_callback, 10)
@@ -31,11 +34,13 @@ class MarkerSender(Node):
 
 
     def generate_markers_position(self):
-        self.cx = 0.2 + random.randint(-4, 4)*0.01
-        self.cy = 0 + random.randint(-6, 6) * 0.01
+        self.cx = 0.25 + random.randint(-4, 4)*0.01
+        self.cy = random.randint(-6, 6)*0.01
+        self.cangle = random.randint(-4, 4)*np.pi/10
 
-        self.px = 0.2 + random.randint(-2, 2)*0.01
-        self.py = 0 + random.randint(-2, 2)*0.01
+        self.px = 0.25 + random.randint(-2, 2)*0.01
+        self.py = random.randint(-2, 2)*0.01
+        self.pangle = random.randint(-4, 4)*np.pi/10
 
     def finished_callback(self, msg: Bool):
         if msg.data is True:
@@ -110,18 +115,32 @@ class MarkerSender(Node):
     def publish_markers(self):
         cube_pose = np.array([self.cx, self.cy, self.cz, 1])
         paper_pose = np.array([self.px, self.py, self.pz, 1])
-        self.get_logger().info(f"x:{self.cx}, y:{self.cy}, z:{self.cz}")
         cp = np.matmul(np.linalg.inv(self.tac), cube_pose.T)
         pp = np.matmul(np.linalg.inv(self.tac), paper_pose.T)
 
         cube_point = Point(x=cp.item(0,0), y=cp.item(0,1), z=cp.item(0,2))
         paper_point = Point(x=pp.item(0,0), y=pp.item(0,1), z=pp.item(0,2))
 
+        cube_roll = 0.0
+        cube_pitch = 0.0
+        cube_yaw = self.cangle
+
+        self.get_logger().info(f"cube angle: {cube_yaw}")
+
+        cube_quat = euler2quat(cube_roll, cube_pitch, cube_yaw)
+
+        paper_roll = 0.0
+        paper_pitch = 0.0
+        paper_yaw = self.pangle
+
+        paper_quat = euler2quat(paper_roll, paper_pitch, paper_yaw)
+        
+
         self.cube_marker_pose = Pose(position=cube_point,
-                                          orientation=Quaternion(x=0.0, y=0.0, z=0.0, w=0.0))
+                                          orientation=Quaternion(x=cube_quat[1], y=cube_quat[2], z=cube_quat[3], w=cube_quat[0]))
         
         self.paper_marker_pose = Pose(position=paper_point,
-                                          orientation=Quaternion(x=0.0, y=0.0, z=0.0, w=0.0))
+                                          orientation=Quaternion(x=paper_quat[1], y=paper_quat[2], z=paper_quat[3], w=paper_quat[0]))
 
         marker_pose_array = PoseArray()
         marker_pose_array.header.stamp = self.get_clock().now().to_msg()

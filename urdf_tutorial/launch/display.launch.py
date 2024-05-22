@@ -39,11 +39,11 @@ def generate_launch_description():
     #         name='angle_node',
     #     ),)
     
-    ld.add_action(Node(
-            package='forward_kin',
-            executable='forward_kin',
-            name='forward_node',
-        ),)
+    # ld.add_action(Node(
+    #         package='forward_kin',
+    #         executable='forward_kin',
+    #         name='forward_node',
+    #     ),)
     
     ld.add_action(Node(
             package='inverse_kin',
