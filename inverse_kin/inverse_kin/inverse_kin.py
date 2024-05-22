@@ -12,12 +12,18 @@ class InverseKin(Node):
         super().__init__('inverse_kin')
         self.point_subscriber = self.create_subscription(PointStamped, 'dobot_pose', self.callback, 10)
         self.angle_publisher = self.create_publisher(JointState, 'joint_states', 10)
+        self.rotation_subscriber = self.create_subscription(JointState, 'tool_rot', self.rotation_callback, 10)
 
+        self.rotation_angle = 0.0
         self.angle_vector = [1, 1, 1, 1, 1]
 
 
     def callback(self, msg):
         self.calculate_angles(msg)
+    
+    def rotation_callback(self, msg: JointState):
+        self.get_logger().info(f"{msg.position[0]}")
+        self.rotation_angle = msg.position[0]
 
     def calculate_angles(self, msg):
         # self.get_logger().info("Otrzymano wiadomość na temat 'clicked_point'")
@@ -68,16 +74,19 @@ class InverseKin(Node):
         # self.get_logger().info(f"angle 4: {theta4}")
         # self.get_logger().info(f"angle 5: {theta5}")
 
-        if theta1 < -1.548 or theta1 > 1.548 or theta2 < 0 or theta2 > 1.484 or theta3 < -0.175 or theta3 > 1.571:
-            for i in range (5):
-                self.angle_vector[i] = 0.0
-            self.get_logger().info("One of angles out of possible range.")
+        # if theta1 < -1.548 or theta1 > 1.548 or theta2 < 0 or theta2 > 1.484 or theta3 < -0.175 or theta3 > 1.571:
+        #     for i in range (5):
+        #         self.angle_vector[i] = 0.0
+        #     self.get_logger().info("One of angles out of possible range.")
+        # else:
+        self.angle_vector[0] = theta1
+        self.angle_vector[1] = theta2
+        self.angle_vector[2] = theta3
+        self.angle_vector[3] = theta4
+        if self.rotation_angle != 0.0:
+            self.angle_vector[4] = self.rotation_angle - theta1 + np.pi/2
         else:
-            self.angle_vector[0] = theta1
-            self.angle_vector[1] = theta2
-            self.angle_vector[2] = theta3
-            self.angle_vector[3] = theta4
-            self.angle_vector[4] = theta5
+            self.angle_vector[4] = self.rotation_angle + np.pi/2
             
         joint_states = JointState()
         joint_states.header.stamp = self.get_clock().now().to_msg()

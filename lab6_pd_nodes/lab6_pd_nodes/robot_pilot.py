@@ -5,8 +5,10 @@ from geometry_msgs.msg import PointStamped, PoseArray
 from visualization_msgs.msg import Marker
 from sensor_msgs.msg import JointState
 from std_msgs.msg import Bool
+from transforms3d.euler import quat2euler, euler2quat
 import numpy as np
 from numpy import sin, cos
+from time import sleep
 
 #from robot_msgs.action import VisPointToPoint
 camera_effector_difference_x = 0.1
@@ -28,12 +30,15 @@ class RobotPilot(Node):
         self.pose_publisher = self.create_publisher(PointStamped, 'dobot_pose', 10)
         self.flag_publisher = self.create_publisher(Bool, 'important_flag', 10)
         self.second_pose_publisher = self.create_publisher(Bool, 'second_pose', 10)
+        self.angle_publisher = self.create_publisher(JointState, 'tool_rot', 10)
+        self.finish_publisher = self.create_publisher(Bool, 'finished', 10)
         self.m_publisher = self.create_publisher(Marker, 'vizualization_marker', 10)
         self.timer = self.create_timer(1 / fr, self.timer_callback)
 
         self.point_1 = None
         self.point_3 = None
         self.publish_marker = False
+        self.tool_rot = 0.0
 
     def joint_states_callback(self ,msg: JointState):
         theta_vector = msg.position
@@ -102,6 +107,11 @@ class RobotPilot(Node):
             y = msg.poses[i].position.y
             z = msg.poses[i].position.z
 
+            rx = msg.poses[i].orientation.x
+            ry = msg.poses[i].orientation.y
+            rz = msg.poses[i].orientation.z
+            rw = msg.poses[i].orientation.w
+
             in_cam = np.array([x, y, z, 1])
             in_rob = np.matmul(self.tac, in_cam.T)
 
@@ -112,9 +122,12 @@ class RobotPilot(Node):
             if i == 1:
                 self.point_1 = [x_, y_, z_+0.1]
                 self.point_2 = [x_, y_, z_+0.03]
+                self.paper_rot = [rw, rx, ry, rz]
             else:
                 self.point_3 = [x_, y_, z_+0.1]
                 self.point_4 = [x_, y_, z_+0.03]
+                self.cube_rot = [rw, rx, ry, rz]
+
 
     def entry_dobot_pose(self):
         self.current_pose = PointStamped()
@@ -137,10 +150,13 @@ class RobotPilot(Node):
             marker1.pose.position.x = self.current_pose.point.x
             marker1.pose.position.y = self.current_pose.point.y
             marker1.pose.position.z = self.current_pose.point.z - 0.021
-            marker1.pose.orientation.x = 0.0
-            marker1.pose.orientation.y = 0.0
-            marker1.pose.orientation.z = 0.0
-            marker1.pose.orientation.w = 1.0
+
+            cube_quat = euler2quat(0.0 , 0.0, self.tool_rot)
+
+            marker1.pose.orientation.x = cube_quat[1]
+            marker1.pose.orientation.y = cube_quat[2]
+            marker1.pose.orientation.z = cube_quat[3]
+            marker1.pose.orientation.w = cube_quat[0]
                 
             marker1.scale.x = 0.02
             marker1.scale.y = 0.02
@@ -155,35 +171,63 @@ class RobotPilot(Node):
             self.m_publisher.publish(marker1)
 
     def operation(self):
+        self.published = False
         while (
             self.point_1 is None or self.point_3 is None
         ) and rclpy.ok():
             rclpy.spin_once(self, timeout_sec= 1 / fr)
 
-        # 1) Move above the box
+        # 1) General move to the middle
+        self.move_to_point([0.2, 0, 0.15, 1], False)
+
+        # 2) Move above the box
         self.move_to_point(self.point_3, False)
 
-        # 2) Move down to the box
+        # 3) Rotate tool
+        self.rotate_tool(self.cube_rot)
+
+        # 4) Move down to the box
         self.move_to_point(self.point_4, False)
 
-        # 3) Move up
+        # 5) Move up
         self.move_to_point(self.point_3, True)
 
-        # 4) Move above the paper
+        # 6) Move above the paper
         self.move_to_point(self.point_1, True)
 
-        # 5) Move down to the paper
+        # 7) Rotate tool
+        self.rotate_tool(self.paper_rot)
+
+        # 8) Move down to the paper
         self.move_to_point(self.point_2, True)
         msg = Bool()
         msg.data = True
         self.second_pose_publisher.publish(msg)
 
-        # 6) Move up
+        # 9) Move up
         self.move_to_point(self.point_1, False)
 
-        # 7) Return
+        # 10) Return
         return_pose = [entry_x, entry_y, entry_z]
         self.move_to_point(return_pose, False)
+        self.rotate_tool([1, 0, 0, 0])
+        msg = Bool()
+        msg.data = True
+        self.finish_publisher.publish(msg)
+    
+    def rotate_tool(self, quat):
+        [r, p, y] = quat2euler(quat)
+
+        self.tool_rot = y        
+
+        self.get_logger().info(f"{y}")
+
+        joint_states = JointState()
+        joint_states.header.stamp = self.get_clock().now().to_msg()
+        joint_states.name = ['tool_rot_joint']
+        joint_states.position = [y]
+        self.angle_publisher.publish(joint_states)
+
 
     def move_to_point(self, point, move_marker):
         if move_marker:
@@ -219,7 +263,9 @@ class RobotPilot(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = RobotPilot()
-    node.operation()
+    for i in range(10):
+        sleep(3)
+        node.operation()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
