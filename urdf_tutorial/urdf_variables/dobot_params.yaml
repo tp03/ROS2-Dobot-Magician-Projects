@@ -13,8 +13,6 @@ links_size:
     length: 0.147
   link4:
     length: 0.08
-  camera_link:
-    length: 0.6
 
 joints_limits:
   joint0:
