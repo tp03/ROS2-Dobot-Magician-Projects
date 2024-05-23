@@ -4,19 +4,20 @@ from sensor_msgs.msg import JointState
 from rclpy.action import ActionClient
 from dobot_msgs.action import PointToPoint
 from dobot_msgs.srv import GripperControl
-from ros2_aruco_interfaces.msg import AcuroMarkers
+from ros2_aruco_interfaces.msg import ArucoMarkers
 from transforms3d.euler import quat2euler, euler2quat
 from std_msgs.msg import Bool
 from numpy import sin, cos
 import numpy as np
 from time import sleep
 
-camera_effector_difference_x = 0.1
-camera_effector_difference_z = 0
+camera_effector_difference_x = 0.04
+camera_effector_difference_y = 0.07
+camera_effector_difference_z = 0.06
 fr = 10
 
 class FinalBoss(Node):
-    def __init___(self):
+    def __init__(self):
         super().__init__('final_boss')
         self.move_client = ActionClient(self, PointToPoint, '/PTP_action')
         self.grap_client = self.create_client(GripperControl, '/dobot_gripper_service')
@@ -25,6 +26,8 @@ class FinalBoss(Node):
         self.flag_publisher = self.create_publisher(Bool, 'important_flag', 10)
 
         self.angle_1 = 0.0
+        self.point_1 = None
+        self.point_3 = None
 
     def joint_states_callback(self ,msg: JointState):
         theta_vector = msg.position
@@ -81,16 +84,19 @@ class FinalBoss(Node):
 
         self.tab = matrixes[5]        
         self.tbc = np.matrix([
-            [1, 0, 0, camera_effector_difference_x],
-            [0, 1, 0, 0],
+            [-1, 0, 0, camera_effector_difference_x],
+            [0, -1, 0, camera_effector_difference_y],
             [0, 0, 1, -camera_effector_difference_z],
             [0, 0, 0, 1]
         ])
         self.tac = np.matmul(self.tab, self.tbc) 
 
     def pose_callback(self, msg: ArucoMarkers):
-        for i in range(2):
-            
+        for i, num in enumerate(msg.marker_ids):
+
+        # if len(msg.markers_id)
+        #     for i in range(2):
+                
             x = msg.poses[i].position.x
             y = msg.poses[i].position.y
             z = msg.poses[i].position.z
@@ -100,21 +106,25 @@ class FinalBoss(Node):
             rz = msg.poses[i].orientation.z
             rw = msg.poses[i].orientation.w
 
-            in_cam = np.array([x, y, z, 1])
-            in_rob = np.matmul(self.tac, in_cam.T)
+            in_d = np.array([x, y, z, 1])
 
-            x_ = in_rob.item(0,0)
-            y_ = in_rob.item(0,1)
-            z_ = in_rob.item(0,2)
-
-            if i == 1:
-                self.point_1 = [x_, y_, z_+0.1]
-                self.point_2 = [x_, y_, z_+0.03]
-                self.paper_rot = [rw, rx, ry, rz]
-            else:
-                self.point_3 = [x_, y_, z_+0.1]
-                self.point_4 = [x_, y_, z_+0.03]
-                self.cube_rot = [rw, rx, ry, rz]
+            if num == 10:
+                self.cube_pos = np.matmul(self.tac, in_d.T)
+                x_ = self.cube_pos.item(0,0)
+                y_ = self.cube_pos.item(0,1)
+                z_ = self.cube_pos.item(0,2)
+                self.cube_rot = [rx, ry, rz, rw]
+                self.point_3 = [x_, y_, 0.7, 1]
+                self.point_4 = [x_, y_, 0.1, 1]
+                 
+            elif num == 1:
+                self.paper_pos = np.matmul(self.tac, in_d.T)
+                self.paper_rot = [rx, ry, rz, rw]
+                x_ = self.paper_pos.item(0,0)
+                y_ = self.paper_pos.item(0,1)
+                z_ = self.paper_pos.item(0,2)
+                self.point_1 = [x_, y_, 0.7, 1]
+                self.point_2 = [x_, y_, 0.1, 1]
 
     def operation(self):
         while (
@@ -122,27 +132,22 @@ class FinalBoss(Node):
         ) and rclpy.ok():
             rclpy.spin_once(self, timeout_sec= 1 / fr)
 
-        # 1) General move to the middle
-        self.move_to_point([0.2, 0, 0.15, 1])
-        while self.in_action == True:
-            rclpy.spin_once(self)
-
         # 2) Move above the box
         self.move_to_point(self.point_3)
         while self.in_action == True:
             rclpy.spin_once(self)
 
         # 3) Rotate tool
-        self.rotate_tool(self.cube_rot)
-        while self.in_action == True:
-            rclpy.spin_once(self)
+        # self.rotate_tool(self.cube_rot)
+        # while self.in_action == True:
+        #     rclpy.spin_once(self)
 
         # 4) Move down to the box
         self.move_to_point(self.point_4)
         while self.in_action == True:
             rclpy.spin_once(self)
 
-        self.change_holding(False)
+        self.change_holding(True)
         while self.in_action == True:
             rclpy.spin_once(self)
 
@@ -157,16 +162,16 @@ class FinalBoss(Node):
             rclpy.spin_once(self)
 
         # 7) Rotate tool
-        self.rotate_tool(self.paper_rot)
-        while self.in_action == True:
-            rclpy.spin_once(self)
+        # self.rotate_tool(self.paper_rot)
+        # while self.in_action == True:
+        #     rclpy.spin_once(self)
 
         # 8) Move down to the paper
         self.move_to_point(self.point_2)
         while self.in_action == True:
             rclpy.spin_once(self)
 
-        self.change_holding(True)
+        self.change_holding(False)
         while self.in_action == True:
             rclpy.spin_once(self)
 
@@ -175,10 +180,10 @@ class FinalBoss(Node):
         while self.in_action == True:
             rclpy.spin_once(self)
 
-        # 10) Return
-        self.rotate_tool([1, 0, 0, 0])
-        while self.in_action == True:
-            rclpy.spin_once(self)
+        # # 10) Return
+        # self.rotate_tool([1, 0, 0, 0])
+        # while self.in_action == True:
+        #     rclpy.spin_once(self)
     
     def rotate_tool(self, quat):
         [r, p, y] = quat2euler(quat)
@@ -196,8 +201,9 @@ class FinalBoss(Node):
         dx = point[0]
         dy = point[1]
         dz = point[2]
+        self.get_logger().info(f"{dx}, {dy}, {dz}")
         move_request = PointToPoint.Goal()
-        move_request.target_pose = [dx, dy, dz, 0.0]
+        move_request.target_pose = [1000*dx-42, 1000*dy, 100*dz, 0.0]
         move_request.motion_type = 1
         future = self.move_client.send_goal_async(move_request)
         future.add_done_callback(self.goal_response_callback)
@@ -228,8 +234,8 @@ class FinalBoss(Node):
         self.in_action = False
 
 
-def main():
-    rclpy.init()
+def main(args=None):
+    rclpy.init(args=args)
     client = FinalBoss()
     client.operation()
     rclpy.spin_once(client)

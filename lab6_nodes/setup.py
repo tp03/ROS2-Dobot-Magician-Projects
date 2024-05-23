@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+                'marker_broker = lab6_nodes.marker_broker:main',
+                'final_boss = lab6_nodes.final_boss:main',
         ],
     },
 )

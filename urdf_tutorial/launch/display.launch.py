@@ -33,11 +33,23 @@ def generate_launch_description():
             # 'jsp_gui': LaunchConfiguration('gui')}.items()
     ))
 
-    # ld.add_action(Node(
-    #         package='angle_translator',
-    #         executable='angle_translator',
-    #         name='angle_node',
-    #     ),)
+    ld.add_action(Node(
+            package='angle_translator',
+            executable='angle_translator',
+            name='angle_node',
+        ),)
+
+    ld.add_action(Node(
+            package='lab6_nodes',
+            executable='marker_broker',
+            name='karol',
+        ),)
+
+    ld.add_action(Node(
+            package='lab6_nodes',
+            executable='final_boss',
+            name='rozpierdalacz',
+        ),)
     
     # ld.add_action(Node(
     #         package='forward_kin',
@@ -45,25 +57,25 @@ def generate_launch_description():
     #         name='forward_node',
     #     ),)
     
-    ld.add_action(Node(
-            package='inverse_kin',
-            executable='inverse_kin',
-            name='inverse_node',
-        ),)
+#     ld.add_action(Node(
+#             package='inverse_kin',
+#             executable='inverse_kin',
+#             name='inverse_node',
+#         ),)
     
-    ld.add_action(Node(
-            package='lab6_pd_nodes',
-            executable='robot_pilot',
-            name='pilot_node',
+#     ld.add_action(Node(
+#             package='lab6_pd_nodes',
+#             executable='robot_pilot',
+#             name='pilot_node',
 
-    ),)
+#     ),)
 
-    ld.add_action(Node(
-            package='lab6_pd_nodes',
-            executable='marker_publisher',
-            name='marker_node',
+#     ld.add_action(Node(
+#             package='lab6_pd_nodes',
+#             executable='marker_publisher',
+#             name='marker_node',
 
-    ),)
+#     ),)
 
     # ld.add_action(Node(
     #         package='move_to_point',
