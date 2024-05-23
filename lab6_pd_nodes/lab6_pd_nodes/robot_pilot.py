@@ -15,6 +15,7 @@ camera_effector_difference_x = 0.1
 camera_effector_difference_z = 0
 
 fr = 10
+velocity = 0.01
 
 entry_x = 0.177
 entry_y = 0.0
@@ -175,7 +176,7 @@ class RobotPilot(Node):
         while (
             self.point_1 is None or self.point_3 is None
         ) and rclpy.ok():
-            rclpy.spin_once(self, timeout_sec= 1 / fr)
+            rclpy.spin_once(self)
 
         # 1) General move to the middle
         self.move_to_point([0.2, 0, 0.15, 1], False)
@@ -245,9 +246,12 @@ class RobotPilot(Node):
         dz = point[2] - self.current_pose.point.z
 
         dist = np.sqrt(dx**2 + dy**2 + dz**2)
-        time = dist / 0.01
+        time = dist / velocity
         
-        steps = max(int(time * fr), 1)
+        if int(time*fr) > 0:
+            steps = int(time*fr)
+        else:
+            steps = 1
 
         x_step = dx / steps
         y_step = dy / steps
@@ -258,7 +262,7 @@ class RobotPilot(Node):
             self.current_pose.point.y += y_step
             self.current_pose.point.z += z_step
             
-            rclpy.spin_once(self, timeout_sec=1 / fr)
+            rclpy.spin_once(self)
 
 def main(args=None):
     rclpy.init(args=args)
